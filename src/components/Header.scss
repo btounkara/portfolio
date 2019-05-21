@@ -1,0 +1,61 @@
+.has-bg-img { 
+    background: url('../background.jpg')center center;
+    background-size:cover; 
+}
+
+.title.name {
+    font-size: 5rem;
+}
+
+.subtitle.role {
+    font-size: 4rem;
+}
+
+.learn-more {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+
+    .fa-chevron-down{
+        display: block;
+        cursor: pointer;
+        -webkit-animation: pulse 2s infinite;
+        animation: pulse 2s infinite;
+    }
+}
+
+@-webkit-keyframes pulse {
+    0% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+
+    50% {
+        -webkit-transform: translate(0, 10px);
+        transform: translate(0, 10px); 
+    }
+
+    100% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0); 
+    }
+}
+  
+ @keyframes pulse {
+    0% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0); 
+    }
+    
+    50% {
+        -webkit-transform: translate(0, 10px);
+        transform: translate(0, 10px);
+    }
+    
+    100% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    } 
+}
+  

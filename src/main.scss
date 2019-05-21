@@ -1,0 +1,82 @@
+@charset "utf-8";
+
+// Import a Google Font
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+
+// Set your brand colors
+$purple: #8A4D76;
+$beige-light: #D0D1CD;
+$beige-lighter: #EFF0EB;
+$blue-lighter: #a8b2d1;
+$blue-dark: #001028;
+$blue-darker: #000710;
+
+// Update Bulma's global variables
+$family-sans-serif: "Nunito", sans-serif;
+$grey-light: $beige-light;
+$primary: $blue-dark;
+$info: $purple;
+$dark: $blue-darker;
+$light: $blue-lighter;
+$light-invert: $blue-dark;
+$widescreen-enabled: false;
+$fullhd-enabled: false;
+
+// Update some of Bulma's component variables
+$body-background-color: $beige-lighter;
+$control-border-width: 2px;
+$input-border-color: transparent;
+$input-shadow: none;
+
+.is-with-bar {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.is-with-bar::after {
+    content: "";
+    display: flex;
+    height: 1px;
+    background-color: $blue-lighter;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    max-width: 100px;
+    width: 100%;
+}
+
+.copyright {
+    padding: 2rem 0;
+}
+
+form {
+    padding: 4rem 4rem 0 4rem;
+    label {
+        color: #FFFFFF !important;
+    }
+}
+
+// Import only what you need from Bulma
+@import "../node_modules/bulma/sass/utilities/_all.sass";
+@import "../node_modules/bulma/sass/base/_all.sass";
+@import "../node_modules/bulma/sass/elements/button.sass";
+@import "../node_modules/bulma/sass/elements/content.sass";
+@import "../node_modules/bulma/sass/elements/container.sass";
+@import "../node_modules/bulma/sass/elements/form.sass";
+@import "../node_modules/bulma/sass/elements/icon.sass";
+@import "../node_modules/bulma/sass/elements/image.sass";
+@import "../node_modules/bulma/sass/elements/title.sass";
+@import "../node_modules/bulma/sass/elements/tag.sass";
+@import "../node_modules/bulma/sass/components/navbar.sass";
+@import "../node_modules/bulma/sass/layout/hero.sass";
+@import "../node_modules/bulma/sass/layout/section.sass";
+@import "../node_modules/bulma/sass/layout/footer.sass";
+@import "../node_modules/bulma/sass/grid/columns.sass";
+@import "../node_modules/bulma-timeline/src/sass/index.sass";
+
+@include until($tablet){
+    .title.is-2{
+        font-size: $size-4;
+    }
+}

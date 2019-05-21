@@ -1,0 +1,16 @@
+@import '../main.scss';
+
+footer {
+    background-color: $blue-darker;
+    .copyright {
+        padding: 1rem 0;
+    }
+
+    form {
+        padding: 4rem 4rem 0 4rem;
+
+        label {
+            color: #FFFFFF !important;
+        }
+    }
+}
