@@ -1,8 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Experience = ({value}) => (
-    <div className="timeline-item is-light">
+const Experience = ({value, delay}) => {
+
+    return <div className="timeline-item is-light"
+        data-aos="fade-in"
+        data-aos-delay={delay}
+    >
         <div className="timeline-marker is-white"></div>
         <div className="timeline-content">
             <p className="heading">
@@ -13,7 +17,7 @@ const Experience = ({value}) => (
             </p>
         </div>
     </div>
-);
+};
 
 Experience.propTypes = {
     value: PropTypes.shape({
@@ -23,7 +27,8 @@ Experience.propTypes = {
         linkToCompany : PropTypes.string.isRequired,
         role : PropTypes.string.isRequired,
         technologies : PropTypes.arrayOf(PropTypes.string.isRequired).isRequired
-    }).isRequired
+    }).isRequired,
+    delay: PropTypes.number.isRequired
 }
 
 export default Experience;

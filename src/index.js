@@ -17,7 +17,6 @@ class Index extends Component {
     super(props);
     AOS.init({
       duration: 2000,
-      mirror: true,
       once: true
     });
   };

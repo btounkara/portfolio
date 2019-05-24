@@ -1,11 +1,11 @@
 import React from 'react'
-
-require('./Footer.scss');
+import './Footer.scss';
+import madeWithBulma from '../made-with-bulma.png';
 
 const Footer = () => (
     <footer id="contact" className="section hero">
         <div className="container is-medium">
-            <h1 className="title is-2 has-text-centered">Get in touch</h1>
+            {/* <h1 className="title is-2 has-text-centered">Get in touch</h1>
             <form>
                 <div class="columns is-centered">
                     <div class="column is-half">
@@ -44,14 +44,14 @@ const Footer = () => (
                         </div>
                     </div>
                 </div>
-            </form>
-            <div className="copyright has-text-centered has-text-white">
+            </form> */}
+            <div className="copyright has-text-centered has-text-light">
                 <p>Copyright © 2019</p>
                 <p>Developed by Bakary Tounkara</p>
             </div>
             <div className="content has-text-centered">
                 <a href="https://bulma.io">
-                    <img src="https://bulma.io/images/made-with-bulma--white.png" alt="Made with Bulma" width="163" height="31"/>
+                    <img src={madeWithBulma} alt="Made with Bulma" width="163" height="31"/>
                 </a>
             </div>
         </div>

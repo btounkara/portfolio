@@ -27,21 +27,38 @@ const experiences = [
 ];
 
 const Work = () => (
-    <section id="work" className="section hero" data-aos="fade-in">
+    <section id="work" className="section hero">
         <div className="hero-body">
             <div className="container">
-                <h1 className="title has-text-white is-2 is-with-bar">Work experience</h1>
+                <h1 className="title has-text-white is-2 is-with-bar" 
+                    id="work-title"
+                    data-aos="fade-in"
+                >
+                    Work experience
+                </h1>
                 <div className="timeline is-centered">
                     
-                    <header className="timeline-header">
+                    <header className="timeline-header"
+                        data-aos="fade-in"
+                        data-aos-delay="100"
+                    >
                         <span className="tag is-medium is-light">2019</span>
                     </header>
 
                     {
-                        experiences.map(exp => <Experience key={exp.id} value={exp}/>)
+                        experiences.map((exp, index) => 
+                            <Experience 
+                                key={exp.id}
+                                value={exp}
+                                delay={(index + 1) * 200}
+                            />
+                        )
                     }
 
-                    <div className="timeline-header">
+                    <div className="timeline-header"
+                        data-aos="fade-in"
+                        data-aos-delay={(experiences.length * 200)}
+                    >
                         <span className="tag is-medium is-light">2013</span>
                     </div>
 
