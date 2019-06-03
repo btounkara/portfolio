@@ -1,43 +1,59 @@
 @import '../main.scss';
 
-div.social {
-    width: 40px;
-    position: fixed;
-    bottom: 0px;
-    color: rgb(168, 178, 209);
-    left: 40px;
-
-    @include until($tablet){
-        display: none !important;
-    }
-
-    @include until($desktop){
-        left: 15px !important;
-    }
+.social {
 
     ul {
         display: flex;
-        flex-direction: column;
         -webkit-box-align: center;
         align-items: center;
-
-        &:after {
-            content: "";
-            display: block;
-            width: 1px;
-            height: 90px;
-            margin: 0px auto;
-            background-color: $blue-lighter;
-        }
 
         > li {
             padding: 10px;
 
-            > a {
-               &:hover {
-                   color: $info !important;
-               }
+            > a:hover {
+                color: $info !important;
             }
+        }
+    }
+
+    &.is-fixed {
+        width: 40px;
+        position: fixed;
+        bottom: 0px;
+        color: rgb(168, 178, 209);
+        left: 40px;
+
+        @include until($tablet){
+            display: none !important;
+        }
+
+        @include until($desktop){
+            left: 15px !important;
+        }
+
+        ul {
+            flex-direction: column;
+     
+            &:after {
+                content: "";
+                display: block;
+                width: 1px;
+                height: 90px;
+                margin: 0px auto;
+                background-color: $blue-lighter;
+            }
+        }
+    }
+
+    &:not(.is-fixed){
+        margin-top: 3rem;
+        
+        @include from($tablet){
+            display: none !important;
+        }
+
+        ul {
+            justify-content: space-evenly;            
         }
     }
 }

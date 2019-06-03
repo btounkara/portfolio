@@ -1,21 +1,40 @@
+@import '../main.scss';
+
+$small-mobile: 430px;
+
 .has-bg-img { 
     background: url('../background.jpg')center center;
     background-size:cover; 
 }
 
 .title.name {
-    font-size: 5rem;
+    @include from($tablet){
+        font-size: 5rem;
+    }
+
+    @media screen and (min-width: $small-mobile) and (max-width: $tablet){
+        font-size: 3rem !important;
+    }
+
+    @include until($small-mobile){
+        font-size: 2rem !important;    
+    }
 }
 
 .subtitle.role {
-    font-size: 4rem;
+    @include from($tablet){
+        font-size: 4rem;
+    }
+
+    @media screen and (min-width: $small-mobile) and (max-width: $tablet){
+        font-size: 2rem;
+    }
 }
 
-.learn-more {
-    position: absolute;
-    bottom: 30px;
-    left: 0;
-    right: 0;
+.hero-foot{
+    @include tablet-only{
+        padding-bottom: 20px;
+    }
 
     .fa-chevron-down{
         display: block;
@@ -42,7 +61,7 @@
     }
 }
   
- @keyframes pulse {
+@keyframes pulse {
     0% {
         -webkit-transform: translate(0, 0);
         transform: translate(0, 0); 

@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Social from './Social';
 import './Header.scss';
 
 {/* TO DO : Add background with parallax effect */}
 
 const Header = ({onClick}) => (
-    <section className="section hero is-fullheight">
+    <section className="hero is-fullheight-with-navbar">
         <div className="hero-body">
             <div className="container">
                 <p className="subtitle is-5" 
@@ -31,10 +32,13 @@ const Header = ({onClick}) => (
                 >
                     I'm based in Paris and specialized in web development.
                 </p>
+                <Social animation="fade-in" delay="600"/>
             </div>
-            <p className="learn-more has-text-centered"
+        </div>
+        <div className="hero-foot">
+            <p className="has-text-centered"
                 data-aos="fade-in"
-                data-aos-delay="500"
+                data-aos-delay="800"
                 data-aos-offset="0"
             >
                 <span className="is-size-4">Get to know me</span>

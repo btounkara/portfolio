@@ -1,5 +1,6 @@
 import React from 'react'
-require('./Social.scss');
+import PropTypes from 'prop-types';
+import './Social.scss';
 
 const logos = [
     {
@@ -14,8 +15,8 @@ const logos = [
     }
 ];
 
-const Social = () => (
-    <div className="social" data-aos="slide-up">
+const Social = ({isFixed, animation, delay}) => (
+    <div className={`social ${isFixed ? 'is-fixed' : ''}`} data-aos={animation} data-aos-delay={delay}>
         <ul>
             {
                 logos.map(social => 
@@ -29,5 +30,17 @@ const Social = () => (
         </ul>
     </div>
 );
+
+
+Social.defaultProps = {
+    isFixed: false,
+    delay: '0'
+};
+
+Social.propTypes = {
+    isFixed: PropTypes.bool,
+    animation: PropTypes.string.isRequired,
+    delay: PropTypes.string
+};
 
 export default Social;

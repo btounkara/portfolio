@@ -13,10 +13,10 @@ const images = importAll(
 );
 
 const About = () => (
-    <section id="about" className="section hero" data-aos="fade-in">
+    <section id="about" className="hero" data-aos="fade-in">
         <div className="hero-body">
             <div className="container">
-                <h1 className="title has-text-white is-2 is-with-bar">About me</h1>
+                <h1 className="title has-text-white is-with-bar">About me</h1>
                 <div className="content is-medium">
                     <p className="is-size-4">
                         <strong>Hello word. I'm <span className="has-text-info">Bakary</span>. Nice to meet you.</strong>

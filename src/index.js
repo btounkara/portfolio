@@ -10,7 +10,6 @@ import AOS from 'aos';
 import './main.scss';
 import '../node_modules/aos/src/sass/aos.scss';
 
-// const Index = () => {
 class Index extends Component {
 
   constructor(props){
@@ -31,7 +30,7 @@ class Index extends Component {
   render() {
     return <div>
         <Navbar onClick={this.scrollTo}/>
-        <Social />
+        <Social isFixed={true} animation="slide-up"/>
         <Header onClick={this.scrollTo}/>
         <About />
         <Work />

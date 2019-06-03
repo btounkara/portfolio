@@ -3,7 +3,7 @@ import './Footer.scss';
 import madeWithBulma from '../made-with-bulma.png';
 
 const Footer = () => (
-    <footer id="contact" className="section hero">
+    <footer id="contact" className="hero">
         <div className="container is-medium">
             {/* <h1 className="title is-2 has-text-centered">Get in touch</h1>
             <form>

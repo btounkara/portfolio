@@ -1,0 +1,23 @@
+@import '../main.scss';
+
+.navbar{
+    // padding: 1rem;
+
+    &.scrolled-in {
+        visibility: visible;
+        transition: all 300ms ease-in;
+    }
+    
+    &.scrolled-out {
+        visibility: hidden;
+        transition: all 300ms ease-out;
+        transform: translate(0, -100%);
+    }
+
+    &.is-light {
+        a:hover{
+            background-color: inherit !important;
+            color: $info !important;
+        }
+    }
+}

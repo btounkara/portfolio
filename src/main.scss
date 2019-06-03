@@ -75,8 +75,8 @@ form {
 @import "../node_modules/bulma/sass/grid/columns.sass";
 @import "../node_modules/bulma-timeline/src/sass/index.sass";
 
-@include until($tablet){
-    .title.is-2{
-        font-size: $size-4;
+@include tablet-only{
+    #index {
+        padding: 3rem 3rem;
     }
 }
