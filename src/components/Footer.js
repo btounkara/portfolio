@@ -1,13 +1,15 @@
 import React, {Component} from 'react'
 import axios from "axios" // For making client request.
 import swal from 'sweetalert2'
-import './Footer.scss';
-import madeWithBulma from '../made-with-bulma.png';
+import './Footer.scss'
+import madeWithBulma from '../made-with-bulma.png'
+import Recaptcha from 'react-recaptcha'
 
 const INITIAL_STATE = {
-    name: "",
-    email: "",
-    message: ""
+    'g-recaptcha-response': '',
+    name: '',
+    email: '',
+    message: ''
 };
 
 class Footer extends Component {
@@ -16,12 +18,37 @@ class Footer extends Component {
         this.state = INITIAL_STATE;
     }
 
+    recaptchaLoaded = () => {
+        if (this.captcha) {
+            this.captcha.reset();
+        }
+    }
+
+    recaptchaVerified = (recaptchaToken) => {
+        if(recaptchaToken){
+            this.setState({
+                'g-recaptcha-response': recaptchaToken
+            });
+        }
+    }
+
     handleFields = e => this.setState({
         [e.target.name]: e.target.value 
     });
 
     handleForm = e => {
-        
+
+        if(this.state['g-recaptcha-response'] === ''){
+            swal.fire({
+                type: 'error',
+                title: 'Please verify the captcha',
+                timer: 1500,
+                showConfirmButton: false
+            });
+            e.preventDefault();
+            return;
+        }
+
         axios.post(
             'https://formcarry.com/s/w0EzFS_lpwr', 
             this.state, 
@@ -30,14 +57,19 @@ class Footer extends Component {
                     'Accept': 'application/json'
                 }
             }
-        ).then(function (response) {
+        ).then((response) => {
             swal.fire({
                 text: 'Your message has been sent', 
                 type: 'success',
                 timer: 1500,
                 showConfirmButton: false
             });
-        }).catch(function (error) {
+
+            this.setState({
+                ...INITIAL_STATE
+            });
+            this.recaptchaLoaded();
+        }).catch((error) => {
             swal.fire({
                 title: 'An error occured',
                 text: 'Try to contact him directly at bak.tounkara@gmail.com.',
@@ -47,9 +79,6 @@ class Footer extends Component {
             });
         });
         
-        this.setState({
-            ...INITIAL_STATE
-        });
         e.preventDefault();
     };
 
@@ -60,9 +89,9 @@ class Footer extends Component {
         >
             <div className="hero-body">
                 <div className="container is-medium">
-                    <h1 className="title is-2 has-text-centered has-text-white">Contact</h1>
-                    <p className="subtitle has-text-centered">Want to work together or simply get in touch ? Don't hesitate</p>
-                    <form onSubmit={this.handleForm} >
+                    <h1 className="title is-2 has-text-centered has-text-white">Contact me</h1>
+                    <p className="subtitle has-text-centered">Want to work together or to simply get in touch ? Don't hesitate</p>
+                    <form onSubmit={this.handleForm}>
                         <div className="columns is-centered">
                             <div className="column is-half">
                                 <div className="field">
@@ -108,6 +137,18 @@ class Footer extends Component {
                                             value={this.state.message}/>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                        <div className="columns is-centered">
+                            <div className="column">
+                                <Recaptcha
+                                    ref={el => this.captcha = el}
+                                    size="normal"
+                                    render="explicit"
+                                    sitekey="6Lc0HasUAAAAAEsx0gITQA00_tChXCadfGeOUeqk"
+                                    onloadCallback={this.recaptchaLoaded}
+                                    verifyCallback={this.recaptchaVerified}
+                                />
                             </div>
                         </div>
                         <div className="columns is-centered">

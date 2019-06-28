@@ -43,6 +43,7 @@
     "bulma-timeline": "^3.0.3",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-recaptcha": "^2.3.10",
     "sweetalert2": "^8.13.0"
   }
 }
