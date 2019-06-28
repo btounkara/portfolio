@@ -15,7 +15,7 @@
     }
 
     &.is-light {
-        a:hover{
+        a.navbar-item:hover{
             background-color: inherit !important;
             color: $info !important;
         }

@@ -1,8 +1,8 @@
 import React from 'react'
 import './About.scss';
 
-const languages = ['Java (J2E)', 'Java (Android)', 'XML', 'SQL', 'JavaScript', 'HTML5', 'CSS3', 'PHP', 'COBOL'];
-const technologies = ['NodeJS', 'React', 'Angular', 'Java 8', 'Webpack', 'Sass', 'Bulma', 'Android', 'Ormlite', 'Mockito', 'Robolectric'];
+const languages = ['Java (J2E)', 'Java (Android)', 'JavaScript', 'XML', 'SQL',  'HTML5', 'CSS3', 'PHP', 'COBOL'];
+const technologies = ['Java 8', 'NodeJS', 'React', 'Angular', 'Webpack', 'Babel', 'Sass', 'Bulma', 'Android', 'Ormlite', 'Mockito', 'Robolectric'];
 
 function importAll(toImport) {
     return toImport.keys().map(toImport);
@@ -13,7 +13,7 @@ const images = importAll(
 );
 
 const About = () => (
-    <section id="about" className="hero" data-aos="fade-in">
+    <section id="about" className="hero is-fullheight" data-aos="fade-in">
         <div className="hero-body">
             <div className="container">
                 <h1 className="title has-text-white is-with-bar">About me</h1>
@@ -31,7 +31,7 @@ const About = () => (
                     </p>
                     <div className="tags">
                         {
-                            languages.map(lang => <span key={lang} className="tag is-light is-medium">{lang}</span>)
+                            languages.map(lang => <span key={lang} className="tag is-light is-rounded is-medium">{lang}</span>)
                         }
                     </div>
                     <p>Recently I've been working with <span className="has-text-info">these technologies</span> :</p>

@@ -15,8 +15,6 @@ class Navbar extends Component {
       show: true,
       scrollPos: 0
     };
-
-    this.handleScroll = this.handleScroll.bind(this);
   }
 
   componentDidMount() {
@@ -27,7 +25,7 @@ class Navbar extends Component {
     window.removeEventListener("scroll", this.handleScroll);
   }
 
-  handleScroll(){
+  handleScroll = () => {
     const { scrollPos } = this.state;
     const newScrollPos = Math.abs(document.body.getBoundingClientRect().top);
     
@@ -85,7 +83,7 @@ class Navbar extends Component {
           >
             <div className="field is-grouped">
               <p className="control">
-                <a className="button is-primary" href={resume}  target="_blank">
+                <a className="button is-rounded is-light is-outlined" href={resume} target="_blank">
                   <span className="icon">
                     <i className="fas fa-download"></i>
                   </span>
