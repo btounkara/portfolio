@@ -35,7 +35,7 @@ const Modal = ({ closeModal, isShown, data }) => {
                         <h2 className="title is-5 has-text-primary">Technologies</h2>
                         <div className="tags">
                             {
-                                data.technologies.map(techno => <span key={techno} className="tag is-light is-medium">{techno}</span>)
+                                data.technologies.map(techno => <span key={techno} className="tag is-light is-medium is-rounded">{techno}</span>)
                             }
                         </div>
                     </div>
