@@ -8,7 +8,13 @@ import Footer from "./components/Footer";
 import Social from "./components/Social";
 import AOS from 'aos';
 import './main.scss';
-import '../node_modules/aos/src/sass/aos.scss';
+import 'aos/src/sass/aos.scss';
+
+// Font Awesome 5 (Free)
+import '@fortawesome/fontawesome-free/scss/fontawesome.scss'
+import '@fortawesome/fontawesome-free/scss/solid.scss' // https://fontawesome.com/icons?d=gallery&s=solid&m=free
+import '@fortawesome/fontawesome-free/scss/regular.scss' // https://fontawesome.com/icons?d=gallery&s=regular&m=free
+import '@fortawesome/fontawesome-free/scss/brands.scss' // https://fontawesome.com/icons?d=gallery&s=brands&m=free
 
 class Index extends Component {
 

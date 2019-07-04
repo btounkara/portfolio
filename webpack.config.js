@@ -1,12 +1,12 @@
-const HtmlWebPackPlugin = require("html-webpack-plugin");
+const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 const htmlWebpackPlugin = new HtmlWebPackPlugin({
-  template: "./src/index.html",
-  filename: "./index.html"
+  template: './src/index.html',
+  filename: './index.html'
 });
 
 const path = require('path');
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
@@ -20,28 +20,26 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader"
+          loader: 'babel-loader'
         }
-      },
-      {
+      },{
         test: /\.css$/,
         use: [
           {
-            loader: "style-loader"
+            loader: 'style-loader'
           },
           {
-            loader: "css-loader",
+            loader: 'css-loader',
             options: {
               modules: true,
               importLoaders: 1,
-              localIdentName: "[name]_[local]_[hash:base64]",
+              localIdentName: '[name]_[local]_[hash:base64]',
               sourceMap: true,
               minimize: true
             }
           }
         ]
-      },
-      {
+      },{
         test: /\.scss$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
@@ -52,32 +50,41 @@ module.exports = {
         })
       },{
         test: /\.svg$/i, 
-        use : [{
-          loader: "file-loader",
-          options: {
-            name: 'icons/[name].[ext]',
-            publicPath: '/dist'
-          }
-        }]
-      }, {
+        loader: 'file-loader',
+        options: {
+          name: 'icons/[name].[ext]'
+        },
+        include: [
+          path.resolve(__dirname, 'src/icons')
+        ]
+      },{
         test: /\.pdf$/i, 
         use : [{
-          loader: "file-loader",
+          loader: 'file-loader',
           options: {
-            name: 'pdf/[name].[ext]',
-            publicPath: '/dist'
+            name: 'pdf/[name].[ext]'
           }
         }]
       },{
         test: /\.(jpe?g|png)$/i, 
         use : [{
-          loader: "file-loader",
+          loader: 'file-loader',
           options: {
-            name: 'images/[name].[ext]',
-            publicPath: '/dist'
+            name: 'images/[name].[ext]'
           }
         }]
-      }
+      },{
+        test: /\.(woff2?|eot|ttf|otf|svg)(\?.*)?$/,
+        loader: 'url-loader',
+        options: { 
+          limit: 10000,
+          name: 'css/fonts/[name].[ext]',
+          publicPath: '../'
+        },
+        include: [
+          path.resolve(__dirname, 'node_modules/@fortawesome')
+        ]
+      },
     ]
   },
   plugins: [htmlWebpackPlugin, new ExtractTextPlugin('css/main.css')]

@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import axios from "axios" // For making client request.
 import swal from 'sweetalert2'
 import './Footer.scss'
-import madeWithBulma from '../made-with-bulma.png'
+import madeWithBulma from '../images/made-with-bulma.png'
 import Recaptcha from 'react-recaptcha'
 
 const INITIAL_STATE = {

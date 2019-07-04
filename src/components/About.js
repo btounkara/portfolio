@@ -24,7 +24,12 @@ const About = () => (
                     <p>
                         I'm a 25 years old french <strong><span className="has-text-info">Fullstack Web Developer</span></strong> based next to <span className="has-text-info">Paris</span>(France).<br/>
                         I'm a problem solver and a thinker who enjoys <span className="has-text-info">being challenged</span> and <span className="has-text-info">coding apps</span>.<br/>
-                        I tend to be curious and love <span className="has-text-info">learning new things</span> in IT as well as in everyday's life.
+                        I tend to be curious and love <span className="has-text-info">learning new things</span> in IT as well as in everyday's life.<br/>
+                    </p>
+                    <p>
+                        I'm graduated from both <a href="http://www.iut.parisdescartes.fr/" className="has-text-info"><strong>Paris Descartes University</strong></a> (Bachelero's degree) and <a href="https://www.efrei.fr/" className="has-text-info"><strong>EFREI</strong></a> (Master's degree).
+                        Shortly after that, I've worked for <a href="http://www.kleegroup.com" className="has-text-info"><strong>Klee Group</strong></a> for 2 years where I had the chance to work on a variety of interisting and challenging projects on a daily basis.
+                        Then, at the end of 2018, I decided to make one of my dream come true by traveling all around Canada during mostly 10 months to discover and enjoy its culture before going back to France.
                     </p>
                     <p>
                         <span className="has-text-primar">Here's a list of languages I speak :</span>
