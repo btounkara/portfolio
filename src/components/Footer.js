@@ -3,10 +3,10 @@ import axios from "axios" // For making client request.
 import swal from 'sweetalert2'
 import './Footer.scss'
 import madeWithBulma from '../images/made-with-bulma.png'
-import Recaptcha from 'react-recaptcha'
+// import Recaptcha from 'react-recaptcha'
 
 const INITIAL_STATE = {
-    'g-recaptcha-response': '',
+    // 'g-recaptcha-response': '',
     name: '',
     email: '',
     message: ''
@@ -18,19 +18,19 @@ class Footer extends Component {
         this.state = INITIAL_STATE;
     }
 
-    recaptchaLoaded = () => {
-        if (this.captcha) {
-            this.captcha.reset();
-        }
-    }
+    // recaptchaLoaded = () => {
+    //     if (this.captcha) {
+    //         this.captcha.reset();
+    //     }
+    // }
 
-    recaptchaVerified = (recaptchaToken) => {
-        if(recaptchaToken){
-            this.setState({
-                'g-recaptcha-response': recaptchaToken
-            });
-        }
-    }
+    // recaptchaVerified = (recaptchaToken) => {
+    //     if(recaptchaToken){
+    //         this.setState({
+    //             'g-recaptcha-response': recaptchaToken
+    //         });
+    //     }
+    // }
 
     handleFields = e => this.setState({
         [e.target.name]: e.target.value 
@@ -38,16 +38,16 @@ class Footer extends Component {
 
     handleForm = e => {
 
-        if(this.state['g-recaptcha-response'] === ''){
-            swal.fire({
-                type: 'error',
-                title: 'Please verify the captcha',
-                timer: 1500,
-                showConfirmButton: false
-            });
-            e.preventDefault();
-            return;
-        }
+        // if(this.state['g-recaptcha-response'] === ''){
+        //     swal.fire({
+        //         type: 'error',
+        //         title: 'Please verify the captcha',
+        //         timer: 1500,
+        //         showConfirmButton: false
+        //     });
+        //     e.preventDefault();
+        //     return;
+        // }
 
         axios.post(
             'https://formcarry.com/s/w0EzFS_lpwr', 
@@ -68,7 +68,7 @@ class Footer extends Component {
             this.setState({
                 ...INITIAL_STATE
             });
-            this.recaptchaLoaded();
+            // this.recaptchaLoaded();
         }).catch((error) => {
             swal.fire({
                 title: 'An error occured',
@@ -90,7 +90,7 @@ class Footer extends Component {
             <div className="hero-body">
                 <div className="container is-medium">
                     <h1 className="title is-2 has-text-centered has-text-white">Contact me</h1>
-                    <p className="subtitle has-text-centered">Want to work together or to simply get in touch ? Don't hesitate</p>
+                    <p className="subtitle has-text-centered">If you want us to work together or to simply get in touch</p>
                     <form onSubmit={this.handleForm}>
                         <div className="columns is-centered">
                             <div className="column is-half">
@@ -139,18 +139,18 @@ class Footer extends Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="columns is-centered">
-                            <div className="column">
+                        {/* <div className="columns">
+                            <div className="column is-narrow" >
                                 <Recaptcha
                                     ref={el => this.captcha = el}
-                                    size="normal"
+                                    size={this.state.sizeCaptcha}
                                     render="explicit"
                                     sitekey="6Lc0HasUAAAAAEsx0gITQA00_tChXCadfGeOUeqk"
                                     onloadCallback={this.recaptchaLoaded}
                                     verifyCallback={this.recaptchaVerified}
                                 />
                             </div>
-                        </div>
+                        </div> */}
                         <div className="columns is-centered">
                             <div className="column is-one-third">
                                 <div className="field">

@@ -10,7 +10,6 @@ class Navbar extends Component {
   
   constructor(props){
     super(props);
-
     this.state = {
       show: true,
       scrollPos: 0
@@ -18,15 +17,29 @@ class Navbar extends Component {
   }
 
   componentDidMount() {
-    window.addEventListener("scroll", this.handleScroll);
+    window.addEventListener('scroll', this.handleScroll);
+    // Get all "navbar-burger" elements
+    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+    // Check if there are any navbar burgers
+    if ($navbarBurgers.length > 0) {
+      // Add a click event on each of them
+      $navbarBurgers.forEach(el => el.addEventListener('click', this.handleBurgerClick));
+    }
   }
   
   componentWillUnmount() {
-    window.removeEventListener("scroll", this.handleScroll);
+    window.removeEventListener('scroll', this.handleScroll);
+    // Get all "navbar-burger" elements
+    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+    // Check if there are any navbar burgers
+    if ($navbarBurgers.length > 0) {
+      // Remove the click event on each of them
+      $navbarBurgers.forEach(el => el.removeEventListener('click', this.handleBurgerClick));
+    }
   }
 
   handleScroll = () => {
-    const { scrollPos } = this.state;
+    const { scrollPos, show } = this.state;
     const newScrollPos = Math.abs(document.body.getBoundingClientRect().top);
     
     // If the scroll is smaller than the SCROLL_DELTA, we do nothing
@@ -34,10 +47,23 @@ class Navbar extends Component {
       return;
     }
 
+    const newShow = newScrollPos < scrollPos || newScrollPos <= MIN_SCROLL_POS;
+    if(show && !newShow){
+      this.props.closeMenu();
+    }
+
     this.setState({
       scrollPos: newScrollPos,
-      show: newScrollPos < scrollPos || newScrollPos <= MIN_SCROLL_POS
+      show: newShow
     });
+  }
+
+  handleBurgerClick = () => {
+    const burger = document.getElementById('navBurger');
+    const menu = document.getElementById('navMenu');
+    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+    burger.classList.toggle('is-active');
+    menu.classList.toggle('is-active');
   }
 
   render(){
@@ -46,15 +72,15 @@ class Navbar extends Component {
 
       { /* Logo and hamburger */ }
       <div className="navbar-brand">
-        <a role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false">
+        <a id="navBurger" role="button" className="navbar-burger burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
         </a>
       </div>
 
-      <div className="navbar-menu">
-        
+      <div id="navMenu" className="navbar-menu">
+
         <div className="navbar-end">
           <a className="navbar-item" 
             onClick={() => onClick('about')}
@@ -100,7 +126,8 @@ class Navbar extends Component {
 }
 
 Navbar.propTypes = {
-  onClick: PropTypes.func.isRequired
+  onClick: PropTypes.func.isRequired,
+  closeMenu: PropTypes.func.isRequired
 };
 
 export default Navbar;

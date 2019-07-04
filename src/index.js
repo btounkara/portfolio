@@ -26,16 +26,25 @@ class Index extends Component {
     });
   };
 
-  scrollTo(id){
+  scrollTo = (id) => {
     const offsetTop = document.getElementById(id).offsetTop;
     window.scroll({
         top: offsetTop, left: 0, behavior: 'smooth' 
     });
+    this.closeMenu();
   };
+
+  closeMenu = () => {
+    const burger = document.getElementById('navBurger');
+    const menu = document.getElementById('navMenu');
+    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+    burger.classList.remove('is-active');
+    menu.classList.remove('is-active');
+  }
 
   render() {
     return <div>
-        <Navbar onClick={this.scrollTo}/>
+        <Navbar onClick={this.scrollTo} closeMenu={this.closeMenu}/>
         <Social isFixed={true} animation="slide-up"/>
         <Header onClick={this.scrollTo}/>
         <About />

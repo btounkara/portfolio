@@ -8,10 +8,11 @@ footer {
     }
 
     form {
-        padding: 4rem 4rem 0 4rem;
+        max-width: 650px;
+        margin: auto;
 
         label {
             color: #FFFFFF !important;
         }
-    }
+    }    
 }
