@@ -67,12 +67,13 @@ module.exports = {
         }]
       },{
         test: /\.(jpe?g|png)$/i, 
-        use : [{
-          loader: 'file-loader',
-          options: {
-            name: 'images/[name].[ext]'
-          }
-        }]
+        loader: 'file-loader',
+        options: {
+          name: 'images/[name].[ext]'
+        },
+        include: [
+          path.resolve(__dirname, 'src/images')
+        ]
       },{
         test: /\.(woff2?|eot|ttf|otf|svg)(\?.*)?$/,
         loader: 'url-loader',
