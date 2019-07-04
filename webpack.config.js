@@ -52,7 +52,7 @@ module.exports = {
         test: /\.svg$/i, 
         loader: 'file-loader',
         options: {
-          name: 'icons/[name].[ext]'
+          name: 'images/technologies_icons/[name].[ext]'
         },
         include: [
           path.resolve(__dirname, 'src/icons')
