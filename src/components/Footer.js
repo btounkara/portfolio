@@ -90,7 +90,7 @@ class Footer extends Component {
             <div className="hero-body">
                 <div className="container is-medium">
                     <h1 className="title is-2 has-text-centered has-text-white">Contact me</h1>
-                    <p className="subtitle has-text-centered">If you want us to work together or to simply get in touch</p>
+                    <p className="subtitle has-text-centered">If you want us to work together or to get in touch</p>
                     <form onSubmit={this.handleForm}>
                         <div className="columns is-centered">
                             <div className="column is-half">

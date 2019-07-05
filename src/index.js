@@ -38,8 +38,9 @@ class Index extends Component {
     const navbar = document.getElementById('nav');
     const burger = document.getElementById('navBurger');
     const menu = document.getElementById('navMenu');
-    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
     [navbar, burger, menu].forEach(elem => elem.classList.remove('is-active'));
+    document.documentElement.classList.remove('locked-scroll');
+    document.getElementById('index').classList.remove('blur');
   }
 
   render() {

@@ -19,7 +19,7 @@ const About = () => (
                 <h1 className="title has-text-white is-with-bar">About me</h1>
                 <div className="content is-medium">
                     <p className="is-size-4">
-                        <strong>Hello word. I'm <span className="has-text-info">Bakary</span>. Nice to meet you.</strong>
+                        <strong>Hello world. I'm <span className="has-text-info">Bakary</span>. Nice to meet you.</strong>
                     </p>
                     <p>
                         I'm a 25 years old french <strong><span className="has-text-info">Fullstack Web Developer</span></strong> based next to <span className="has-text-info">Paris</span>(France).<br/>
