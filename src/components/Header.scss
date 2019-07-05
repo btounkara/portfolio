@@ -32,9 +32,7 @@ $small-mobile: 430px;
 }
 
 .hero-foot{
-    @include tablet-only{
-        padding-bottom: 20px;
-    }
+    padding-bottom: 1em;
 
     .fa-chevron-down{
         display: block;

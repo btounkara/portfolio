@@ -35,11 +35,11 @@ class Index extends Component {
   };
 
   closeMenu = () => {
+    const navbar = document.getElementById('nav');
     const burger = document.getElementById('navBurger');
     const menu = document.getElementById('navMenu');
     // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-    burger.classList.remove('is-active');
-    menu.classList.remove('is-active');
+    [navbar, burger, menu].forEach(elem => elem.classList.remove('is-active'));
   }
 
   render() {

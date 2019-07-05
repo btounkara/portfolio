@@ -5,6 +5,21 @@ import './Navbar.scss';
 
 const MIN_SCROLL_POS = 10;
 const SCROLL_DELTA = 5;
+const menuItems = [
+  {
+    sectionLink: 'about',
+    delay: 0,
+    text: 'About'
+  }, {
+    sectionLink: 'work',
+    delay: 150,
+    text: 'Work experience'
+  }, {
+    sectionLink: 'contact',
+    delay: 300,
+    text: 'Contact me'
+  }
+];
 
 class Navbar extends Component {
   
@@ -59,16 +74,25 @@ class Navbar extends Component {
   }
 
   handleBurgerClick = () => {
+    const navbar = document.getElementById('nav');
     const burger = document.getElementById('navBurger');
     const menu = document.getElementById('navMenu');
     // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-    burger.classList.toggle('is-active');
-    menu.classList.toggle('is-active');
+    [navbar, burger, menu].forEach(elem => elem.classList.toggle('is-active'));
+
+    const isActive = burger.classList.contains('is-active');
+    if(isActive){
+      document.documentElement.classList.add('locked-scroll');
+      document.getElementById('index').classList.add('blur');
+    } else {
+      document.documentElement.classList.remove('locked-scroll');
+      document.getElementById('index').classList.remove('blur');
+    }
   }
 
   render(){
     const { onClick } = this.props;
-    return <nav className={`navbar has-background-dark has-text-white is-light is-fixed-top ${this.state.show ? 'scrolled-in' : 'scrolled-out'}`}>
+    return <nav id="nav" className={`navbar has-background-dark has-text-white is-light is-fixed-top ${this.state.show ? 'scrolled-in' : 'scrolled-out'}`}>
 
       { /* Logo and hamburger */ }
       <div className="navbar-brand">
@@ -82,33 +106,25 @@ class Navbar extends Component {
       <div id="navMenu" className="navbar-menu">
 
         <div className="navbar-end">
-          <a className="navbar-item" 
-            onClick={() => onClick('about')}
-            data-aos="fade-down"
-          >
-            About
-          </a>
-          <a className="navbar-item" 
-            onClick={() => onClick('work')}
-            data-aos="fade-down"
-            data-aos-delay="100"
-          >
-            Work experience
-          </a>
-          <a className="navbar-item" 
-            onClick={() => onClick('contact')}
-            data-aos="fade-down"
-            data-aos-delay="200"
-          >
-            Contact me
-          </a>
-      
+          {
+            menuItems.map(item => 
+              <a className="navbar-item has-text-centered-touch" 
+                key={item.sectionLink}
+                onClick={() => onClick(item.sectionLink)}
+                data-aos="fade-down"
+                data-aos-delay={item.delay}
+              >
+                {item.text}
+              </a>  
+            )
+          }
+                            
           <div className="navbar-item"
             data-aos="fade-down"
-            data-aos-delay="300"
+            data-aos-delay="450"
           >
-            <div className="field is-grouped">
-              <p className="control">
+            <div className="field">
+              <p className="control has-text-centered-touch">
                 <a className="button is-rounded is-light is-outlined" href={resume} target="_blank">
                   <span className="icon">
                     <i className="fas fa-download"></i>
