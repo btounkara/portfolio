@@ -1,6 +1,6 @@
 import React , {Component} from 'react'
-import Experience from './Experience';
-import Modal from './Modal';
+import Experience from '../Experience/Experience';
+import Modal from '../Modal/Modal';
 
 const experiences = [
     {

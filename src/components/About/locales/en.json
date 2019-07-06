@@ -1,0 +1,41 @@
+{
+    "title": "About me",
+    "hello": {
+        "start": "Hello world. I'm",
+        "end": "Nice to meet you"
+    },
+    "presentation": {
+        "me": "I'm a 25 years old french",
+        "role": "Fullstack Web Developer",
+        "based": "based next to",
+        "solver": "I'm a problem solver and a thinker who enjoys",
+        "challenged": "being challenged",
+        "coding": "coding apps",
+        "curious": "I tend to be curious and love",
+        "learning": "learning new things",
+        "life": "in IT as well as in everyday's life"
+    },
+    "school": {
+        "start": "I'm a software engineer graduated from both",
+        "descartes": {
+            "name": "Paris Descartes University",
+            "degree": "(Bachelero's degree)"
+        },
+        "efrei": {
+            "name": "EFREI",
+            "degree": "(Master's degree)"
+        },
+        "and": "and",
+        "work": {
+            "start": "Shortly after that, I've worked for",
+            "end": "for 2 years where I had the chance to work on a variety of interesting and challenging projects on a daily basis"
+        },
+        "dream": "Then, at the end of 2018, I decided to make one of my dream come true by traveling all around Canada during almost a year to discover and enjoy its culture."
+    },
+    "languagesSpoken": "Here's a list of languages I speak",
+    "recently": {
+        "start": "Recently I've been working with",
+        "end": "these technologies"
+    },
+    "developmentTools": "The development tools I use"
+}

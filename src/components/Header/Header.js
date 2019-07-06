@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Social from './Social';
+import Social from '../Social/Social';
 import './Header.scss';
 
 {/* TO DO : Add background with parallax effect */}
@@ -12,7 +12,7 @@ const Header = ({onClick}) => (
                 <p className="subtitle is-5" 
                     data-aos="fade-in"
                 >
-                    Hi ! My name is
+                    Hi ! My name is {}
                 </p>
                 <p className="title name has-text-white" 
                     data-aos="fade-in"

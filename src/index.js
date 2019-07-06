@@ -1,12 +1,13 @@
 import React, {Component} from "react";
 import ReactDOM from "react-dom";
-import Header from './components/Header'
-import Navbar from './components/Navbar'
-import About from "./components/About";
-import Work from "./components/Work";
-import Footer from "./components/Footer";
-import Social from "./components/Social";
+import Header from './components/Header/Header'
+import Navbar from './components/Navbar/Navbar'
+import About from "./components/About/About";
+import Work from "./components/Work/Work";
+import Footer from "./components/Footer/Footer";
+import Social from "./components/Social/Social";
 import AOS from 'aos';
+import './i18n';
 import './main.scss';
 import 'aos/src/sass/aos.scss';
 

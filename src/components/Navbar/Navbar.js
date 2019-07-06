@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import resume from '../pdf/Resume - Bakary TOUNKARA.pdf';
+import resume from '../../pdf/Resume - Bakary TOUNKARA.pdf';
 import './Navbar.scss';
 
 const MIN_SCROLL_POS = 10;
