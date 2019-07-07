@@ -2,22 +2,21 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import resume from '../../pdf/Resume - Bakary TOUNKARA.pdf';
 import './Navbar.scss';
+import { withTranslation } from 'react-i18next';
 
 const MIN_SCROLL_POS = 10;
 const SCROLL_DELTA = 5;
+
 const menuItems = [
   {
     sectionLink: 'about',
-    delay: 0,
-    text: 'About'
+    delay: 0
   }, {
     sectionLink: 'work',
-    delay: 150,
-    text: 'Work experience'
+    delay: 150
   }, {
     sectionLink: 'contact',
-    delay: 300,
-    text: 'Contact me'
+    delay: 300
   }
 ];
 
@@ -91,7 +90,7 @@ class Navbar extends Component {
   }
 
   render(){
-    const { onClick } = this.props;
+    const { onClick, t } = this.props;
     return <nav id="nav" className={`navbar has-background-dark has-text-white is-light is-fixed-top ${this.state.show ? 'scrolled-in' : 'scrolled-out'}`}>
 
       { /* Logo and hamburger */ }
@@ -114,7 +113,7 @@ class Navbar extends Component {
                 data-aos="fade-down"
                 data-aos-delay={item.delay}
               >
-                {item.text}
+                {t(`navbar.${item.sectionLink}`)}
               </a>  
             )
           }
@@ -129,7 +128,7 @@ class Navbar extends Component {
                   <span className="icon">
                     <i className="fas fa-download"></i>
                   </span>
-                  <span>My resume</span>
+                  <span>{t('navbar.resume')}</span>
                 </a>
               </p>
             </div>
@@ -146,4 +145,4 @@ Navbar.propTypes = {
   closeMenu: PropTypes.func.isRequired
 };
 
-export default Navbar;
+export default withTranslation()(Navbar);

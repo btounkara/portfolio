@@ -3,7 +3,7 @@ import axios from "axios" // For making client request.
 import swal from 'sweetalert2'
 import './Footer.scss'
 import madeWithBulma from '../../images/made-with-bulma.png'
-// import Recaptcha from 'react-recaptcha'
+import { withTranslation } from 'react-i18next';
 
 const INITIAL_STATE = {
     // 'g-recaptcha-response': '',
@@ -83,19 +83,20 @@ class Footer extends Component {
     };
 
     render() {
+        const { t, i18n } = this.props;
         return <footer id="contact" 
             className="hero section is-fullheight"
             data-aos="fade-in"
         >
             <div className="hero-body">
                 <div className="container is-medium">
-                    <h1 className="title is-2 has-text-centered has-text-white">Contact me</h1>
-                    <p className="subtitle has-text-centered">If you want us to work together or to get in touch</p>
+                    <h1 className="title is-2 has-text-centered has-text-white">{t('footer.contact')}</h1>
+                    <p className="subtitle has-text-centered">{t('footer.getInTouch')}</p>
                     <form onSubmit={this.handleForm}>
                         <div className="columns is-centered">
                             <div className="column is-half">
                                 <div className="field">
-                                    <label className="label">Name</label>
+                                    <label className="label">{t('footer.name')}</label>
                                     <div className="control is-expanded">
                                         <input 
                                             className="input is-medium"
@@ -110,7 +111,7 @@ class Footer extends Component {
                             </div>
                             <div className="column is-half">
                                 <div className="field">
-                                    <label className="label">Email</label>
+                                    <label className="label">{t('footer.mail')}</label>
                                     <div className="control is-expanded">
                                         <input className="input is-medium" 
                                             id="email"
@@ -126,7 +127,7 @@ class Footer extends Component {
                         <div className="columns is-centered">
                             <div className="column">
                                 <div className="field">
-                                    <label className="label">Message</label>
+                                    <label className="label">{t('footer.message')}</label>
                                     <div className="control is-expanded">
                                         <textarea className="textarea is-medium" 
                                             id="message"
@@ -155,7 +156,9 @@ class Footer extends Component {
                             <div className="column is-one-third">
                                 <div className="field">
                                     <div className="control">
-                                        <button type="submit"className="button is-light is-outlined is-medium is-fullwidth is-rounded">Submit</button>
+                                        <button type="submit"className="button is-light is-outlined is-medium is-fullwidth is-rounded">
+                                            {t('footer.submit')}
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -177,4 +180,4 @@ class Footer extends Component {
     }
 }
 
-export default Footer;
+export default withTranslation()(Footer);

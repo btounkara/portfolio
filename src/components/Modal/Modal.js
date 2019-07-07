@@ -1,10 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './Modal.scss';
+import { useTranslation } from 'react-i18next';
 
-const Modal = ({ closeModal, isShown, data }) => {
-    return(
-      <div className={`modal ${isShown ? 'is-active' : ''}`}>
+export default function Modal({ closeModal, isShown, data }){
+    const { t, i18n } = useTranslation();
+    const hasTasks = data.tasks.length > 0;
+    const hasTechnologies = data.technologies.length > 0;
+    return  <div className={`modal ${isShown ? 'is-active' : ''}`}>
         <div className="modal-background" onClick={closeModal} />
         <div className="modal-content">
             <div className="box">
@@ -12,43 +15,55 @@ const Modal = ({ closeModal, isShown, data }) => {
                     
                     <div className="block">
                         <h1 className="title is-4 has-text-dark">
-                            {data.role} <a href={data.company.link} className="has-text-info">@{data.company.name}</a>
+                            {data.role} <a href={data.establishment.link} className="has-text-info">@{data.establishment.name}</a>
                         </h1>
                         <p className="subtitle is-6 has-text-grey-dark">{data.dates}</p>
                     </div>
                     
-                    <div className="block">
-                        <h2 className="title is-5 has-text-primary">{data.company.domain}</h2>
-                        <p className="subtitle is-size-6 has-text-grey-dark">{data.company.resume}</p>
-                    </div>
                     
                     <div className="block">
-                        <h2 className="title is-5 has-text-primary">Tasks</h2>
-                        <ul>
-                            {
-                                data.tasks.map(task => <li key={task} className="is-size-6 has-text-grey-dark">{task}</li>)
-                            }
-                        </ul>
+                        {
+                            data.establishment.domain && <h2 className="title is-5 has-text-primary">{data.establishment.domain}</h2>
+                        }
+                        {
+                            data.establishment.resume && <p className="subtitle is-size-6 has-text-grey-dark">{data.establishment.resume}</p>
+                        }
                     </div>
                     
-                    <div className="block">
-                        <h2 className="title is-5 has-text-primary">Technologies</h2>
-                        <div className="tags">
-                            {
-                                data.technologies.map(techno => <span key={techno} className="tag is-light is-medium is-rounded">{techno}</span>)
-                            }
+                    { 
+                        hasTasks && 
+                        <div className="block">
+                            <h2 className="title is-5 has-text-primary">{t('modal.tasks')}</h2>
+                            <ul>
+                                {
+                                    data.tasks.map(task => <li key={task} className="is-size-6 has-text-grey-dark">{task}</li>)
+                                }
+                            </ul>
                         </div>
-                    </div>
+                    }
+                    
+                    { 
+                        hasTechnologies > 0 && 
+                        <div className="block">
+                            <h2 className="title is-5 has-text-primary">{t('modal.technologies')}</h2>
+                            <div className="tags">
+                                {
+                                    data.technologies.map(techno => <span key={techno} className="tag is-light is-medium is-rounded">{techno}</span>)
+                                }
+                            </div>
+                        </div>
+                    }
                 </div>
             </div>
         </div>
+        
         <button 
             className="modal-close is-large" 
             aria-label="close"
             onClick={closeModal}
         />
-      </div>
-    );
+        
+    </div>
 }
 
 Modal.propTypes = {
@@ -56,18 +71,16 @@ Modal.propTypes = {
     isShown: PropTypes.bool.isRequired,
     data: PropTypes.shape({
         id: PropTypes.number.isRequired,
+        isWork: PropTypes.bool.isRequired,
         dates : PropTypes.string.isRequired,        
         role : PropTypes.string.isRequired,
-        company: PropTypes.shape({
+        establishment: PropTypes.shape({
             name : PropTypes.string.isRequired,
-            domain: PropTypes.string.isRequired,
-            resume: PropTypes.string.isRequired,
-            logo: PropTypes.string.isRequired,
+            domain: PropTypes.string,
+            resume: PropTypes.string,
             link : PropTypes.string.isRequired,
         }).isRequired,
-        tasks: PropTypes.arrayOf(PropTypes.string).isRequired,
-        technologies: PropTypes.arrayOf(PropTypes.string).isRequired
+        tasks: PropTypes.arrayOf(PropTypes.string),
+        technologies: PropTypes.arrayOf(PropTypes.string)
     }).isRequired
-}
-
-export default Modal;
+};

@@ -1,0 +1,85 @@
+{
+    "title": "Work experience",
+    "experiences" : [
+        {
+            "id": 1,
+            "isWork": true,
+            "dates" : "Oct. 2016 - 2018",
+            "role" : "Fullstack Software Engineer",
+            "establishment": {
+                "name" : "Klee Group",
+                "link" : "http://www.kleegroup.com",
+                "domain": "IT Consulting",
+                "resume": "Software publishing & implementing IT systems."
+            },
+            "tasks": [
+                "Analysis & conception (UML), writing of specifications, development, continuous integration (Maven, Sonar, Jenkins, SVN/Git), unit test(JUnit), code and database refactoring, deployment on multiple environments.",
+                "Developed several web applications using both V-Model and SCRUM methodologies.",
+                "Built a web application from scratch with geographical features using Geoserver, OpenLayers(2 & 3), PostgreSQL and PostGIS.",
+                "Implemented a notification center using REST webservices and Redis database.",
+                "Added an authentication portal based on CAS protocol to an existing web application."
+            ],
+            "technologies": [
+                "Java (J2EE)", "PHP", "Struts2", "OpenLayers", "Geoserver", "PostgreSQL", "PostGIS","Redis(NoSQL)",
+                "Maven", "Sonar", "SVN", "Git", "HTML5", "CSS3", "Javascript", "Jquery", "Bootstrap"
+            ]
+        }, {
+            "id": 2,
+            "isWork": false,
+            "dates" : "Oct. 2016",
+            "role" : "Master's degree",
+            "establishment": {
+                "name" : "EFREI",
+                "link" : "https://www.ca-consumerfinance.com/"
+            }
+        }, {
+            "id": 3,
+            "isWork": true,
+            "dates" : "Sept. 2013 - 2016",
+            "role" : "Fullstack Software Engineer",
+            "establishment": {
+                "name" : "CA Consumer Finance",
+                "link" : "https://www.ca-consumerfinance.com/",
+                "domain": "Credit Consumer Market",
+                "resume": "Financing, brokerage, and insurance solutions."
+            },
+            "tasks": [
+                "Analysis & conception (UML), writing of specifications, development, continuous integration (Maven, Sonar, Jenkins, SVN), unit test(JUnit).",
+                "Built a web application (J2EE, Spring MVC, Hibernate) communcating with mainframe services using a middleware (Oracle Tuxedo).",
+                "Developed the mainframe services used by the web application using COBOL.",
+                "Proposed and implmented a new design of the web application using Bootstrap."
+            ],
+            "technologtechnologiesies": [
+                "Java", "COBOL", "Hibernate", "DB2", "Spring MVC", "SQL", "XML", "JSP", "Bootstrap", 
+                "Maven", "Sonar", "SVN", "HTML5", "CSS3", "Javascript", "Jquery"
+            ]
+        }, {
+            "id": 4,
+            "isWork": false,
+            "dates" : "July 2013",
+            "role" : "Bachelor's degree",
+            "establishment": {
+                "name" : "Paris Descartes University",
+                "link" : "https://www.assurpeople.com/"
+            }
+        }, {
+            "id": 5,
+            "isWork": true,
+            "dates" : "April - June 2013",
+            "role" : "Web Developer",
+            "establishment": {
+                "name" : "AssurPeople",
+                "link" : "https://www.assurpeople.com/",
+                "domain": "Insurance Broker",
+                "resume": "Brokerage and insurance solutions providing."
+            },
+            "tasks": [
+                "Gathered requirements from human resources.",
+                "Developed a web application used to handle company\"s leave management."
+            ],
+            "technologies": [
+                "Php", "MySQL", "WampServer", "HTML5", "CSS3", "Javascript", "Jquery", "SQL"
+            ]
+        }
+    ]
+}
