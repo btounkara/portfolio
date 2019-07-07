@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import resume from '../../pdf/Resume - Bakary TOUNKARA.pdf';
 import './Navbar.scss';
 import { withTranslation } from 'react-i18next';
+import i18n from 'i18next';
 
 const MIN_SCROLL_POS = 10;
 const SCROLL_DELTA = 5;
@@ -10,15 +11,18 @@ const SCROLL_DELTA = 5;
 const menuItems = [
   {
     sectionLink: 'about',
-    delay: 0
-  }, {
-    sectionLink: 'work',
     delay: 150
   }, {
-    sectionLink: 'contact',
+    sectionLink: 'work',
     delay: 300
+  }, {
+    sectionLink: 'contact',
+    delay: 450
   }
 ];
+
+const french = 'fr';
+const english = 'en';
 
 class Navbar extends Component {
   
@@ -26,7 +30,8 @@ class Navbar extends Component {
     super(props);
     this.state = {
       show: true,
-      scrollPos: 0
+      scrollPos: 0,
+      lng: i18n.language
     };
   }
 
@@ -89,6 +94,14 @@ class Navbar extends Component {
     }
   }
 
+  handleChangeLng = (e) => {
+    const curLng = i18n.language;
+    const lng = curLng === french ? english : french;
+    this.setState({ lng: lng }, () => {
+      i18n.changeLanguage(lng);
+    });
+  }
+
   render(){
     const { onClick, t } = this.props;
     return <nav id="nav" className={`navbar has-background-dark has-text-white is-light is-fixed-top ${this.state.show ? 'scrolled-in' : 'scrolled-out'}`}>
@@ -105,6 +118,17 @@ class Navbar extends Component {
       <div id="navMenu" className="navbar-menu">
 
         <div className="navbar-end">
+          
+          <div className="navbar-item">
+            <a className="button is-light is-outlined is-small is-fullwidth is-rounded"
+              onClick={this.handleChangeLng}
+              data-aos="fade-down"
+              data-aos-delay="0"
+            >
+              { this.state.lng === french ? english : french }
+            </a>
+          </div>
+          
           {
             menuItems.map(item => 
               <a className="navbar-item has-text-centered-touch" 
