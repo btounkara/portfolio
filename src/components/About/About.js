@@ -1,14 +1,22 @@
 import React, {Component} from 'react'
 import './About.scss';
 import { useTranslation } from 'react-i18next';
+import _ from 'lodash';
 
 const languages = ['Java (J2E)', 'Java (Android)', 'JavaScript', 'XML', 'SQL',  'HTML5', 'CSS3', 'PHP', 'COBOL'];
 const technologies = ['Java 8', 'NodeJS', 'React', 'Angular', 'Webpack', 'Babel', 'Sass', 'Bulma', 'Android', 'Ormlite', 'Mockito', 'Robolectric'];
 
 function importAll(toImport) {
-    return toImport.keys().map(toImport);
+    return toImport.keys().map(toImport).map(elem => {
+        const slicedString = elem.split('/');
+        const underscore_name = slicedString[slicedString.length - 1].split('.')[0];
+        return { 
+            path: elem,
+            name: _.startCase(_.camelCase(underscore_name))
+        }
+    });
 }
-  
+
 const images = importAll(
     require.context('../../icons', false, /\.(png|jpe?g|svg)$/)
 );
@@ -55,9 +63,9 @@ export default function About() {
                     <div className="columns is-multiline is-centered is-mobile">
                         {
                             images.map(image => 
-                                <div className="column" key={image}>
-                                    <figure className="image is-64x64">
-                                        <img src={image}/>
+                                <div className="column" key={image.path}>
+                                    <figure className="image is-64x64 tooltip is-tooltip-bottom is-tooltip-info" data-tooltip={image.name}>
+                                        <img src={image.path}/>
                                     </figure>
                                 </div>
                             )

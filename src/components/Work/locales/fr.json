@@ -49,7 +49,7 @@
                 "Développement des services métiers mainframe (COBOL) utilisé par l'application web.",
                 "Proposition et implémentation d'un nouveau design pour l'application en utilisant Bootstrap et d'autres libraries javascript."
             ],
-            "technologtechnologiesies": [
+            "technologies": [
                 "Java", "COBOL", "Hibernate", "DB2", "Spring MVC", "SQL", "XML", "JSP", "Bootstrap", 
                 "Maven", "Sonar", "SVN", "HTML5", "CSS3", "Javascript", "Jquery"
             ]

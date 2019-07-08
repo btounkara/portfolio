@@ -70,6 +70,7 @@ $input-shadow: none;
 @import '../node_modules/bulma/sass/layout/footer.sass';
 @import '../node_modules/bulma/sass/grid/columns.sass';
 @import '../node_modules/bulma-timeline/src/sass/index.sass';
+@import '../node_modules/bulma-tooltip/src/sass/index.sass';
 
 @include tablet-only{
     #index {

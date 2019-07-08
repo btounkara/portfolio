@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import resume from '../../pdf/Resume - Bakary TOUNKARA.pdf';
+import cv from '../../pdf/CV - Bakary TOUNKARA.pdf';
 import './Navbar.scss';
 import { withTranslation } from 'react-i18next';
 import i18n from 'i18next';
@@ -21,8 +22,15 @@ const menuItems = [
   }
 ];
 
-const french = 'fr';
-const english = 'en';
+const french = {
+  name: 'Français / French',
+  fr: 'fr'
+};
+
+const english = {
+  name: 'Anglais / English',
+  en:'en'
+};
 
 class Navbar extends Component {
   
@@ -96,7 +104,7 @@ class Navbar extends Component {
 
   handleChangeLng = (e) => {
     const curLng = i18n.language;
-    const lng = curLng === french ? english : french;
+    const lng = curLng === french.fr ? english.en : french.fr;
     this.setState({ lng: lng }, () => {
       i18n.changeLanguage(lng);
     });
@@ -119,14 +127,18 @@ class Navbar extends Component {
 
         <div className="navbar-end">
           
-          <div className="navbar-item">
-            <a className="button is-light is-outlined is-small is-fullwidth is-rounded"
-              onClick={this.handleChangeLng}
-              data-aos="fade-down"
-              data-aos-delay="0"
-            >
-              { this.state.lng === french ? english : french }
-            </a>
+          <div className="navbar-item"
+            data-aos="fade-down"
+            data-aos-delay="0"
+          >
+            <p className="control has-text-centered-touch">
+              <a className="button is-light is-outlined is-small is-rounded"
+                title={ this.state.lng === french.fr ? english.name : french.name }
+                onClick={this.handleChangeLng}
+              >
+                { this.state.lng === french.fr ? english.en : french.fr }
+              </a>
+            </p>
           </div>
           
           {
@@ -146,16 +158,14 @@ class Navbar extends Component {
             data-aos="fade-down"
             data-aos-delay="450"
           >
-            <div className="field">
-              <p className="control has-text-centered-touch">
-                <a className="button is-rounded is-light is-outlined" href={resume} target="_blank">
-                  <span className="icon">
-                    <i className="fas fa-download"></i>
-                  </span>
-                  <span>{t('navbar.resume')}</span>
-                </a>
-              </p>
-            </div>
+            <p className="control has-text-centered-touch">
+              <a className="button is-rounded is-light is-outlined" href={ this.state.lng === french ? cv : resume } target="_blank">
+                <span className="icon">
+                  <i className="fas fa-download"></i>
+                </span>
+                <span>{t('navbar.resume')}</span>
+              </a>
+            </p>
           </div>
         </div>
 
