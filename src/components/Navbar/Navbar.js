@@ -159,7 +159,7 @@ class Navbar extends Component {
             data-aos-delay="450"
           >
             <p className="control has-text-centered-touch">
-              <a className="button is-rounded is-light is-outlined" href={ this.state.lng === french ? cv : resume } target="_blank">
+              <a className="button is-rounded is-light is-outlined" href={ this.state.lng === french.fr ? cv : resume } target="_blank">
                 <span className="icon">
                   <i className="fas fa-download"></i>
                 </span>
