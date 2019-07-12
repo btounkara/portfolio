@@ -8,12 +8,12 @@
         "me": "Je suis un",
         "role": "Ingénieur Web Fullstack",
         "based": "français de 25 ans habitant près de",
-        "solver": "J'aime résoudre des problématiques ainsi que",
+        "solver": "J'aime résoudre des problématiques, ",
         "challenged": "relever des défis",
         "coding": "coder des applications",
-        "curious": "Je suis quelqu'un de curieux et passioné qui adore",
-        "learning": "apprendre de nouvelles choses",
-        "life": "aussi bien professionnellement que dans la vie de tous les jours"
+        "curious": "Je suis quelqu'un de curieux et passionné qui adore",
+        "learning": "en apprendre toujours plus",
+        "life": "aussi bien professionnellement que dans ma vie personnelle"
     },
     "school": {
         "start": "Je suis diplômé de l'université",
@@ -28,11 +28,11 @@
         },
         "work": {
             "start": "Après l'obtention de mes diplômes, j'ai travaillé pour",
-            "end": "pendant 2 ans. C'est une SSII dans laquelle j'ai eu l'opportunité de travailler sur différentes variétés de projets intéressants et challengeants"
+            "end": "pendant 2 ans. C'est une ESN dans laquelle j'ai eu l'opportunité de travailler sur des projets variés, captivants et challengeants"
         },
         "dream": "Suite à ça, à la fin de l'année 2018, j'ai décidé de réaliser un de mes rêves d'enfant : un voyage à travers le Canada pendant 1 an afin d'y découvrir et apprécier sa culture ainsi que ses merveilleux paysages."
     },
-    "languagesSpoken": "Voici une liste de langages que je parle",
+    "languagesSpoken": "Voici les langages dans lesquels je développe",
     "recently": {
         "start": "J'ai récemment travaillé avec",
         "end": "ces technologies"

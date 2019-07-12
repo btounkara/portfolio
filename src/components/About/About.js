@@ -33,7 +33,7 @@ export default function About() {
                         <strong>{t('about.hello.start')} <span className="has-text-info">Bakary</span>. {t('about.hello.end')}.</strong>
                     </p>
                     <p>
-                        {t('about.presentation.me')} <strong><span className="has-text-info">{t('about.presentation.role')}</span></strong> {t('about.presentation.based')} <span className="has-text-info">Paris</span>(France).<br/>
+                        {t('about.presentation.me')} <strong><span className="has-text-info">{t('about.presentation.role')}</span></strong> {t('about.presentation.based')} <span className="has-text-info">Paris</span> (France).<br/>
                         {t('about.presentation.solver')} <span className="has-text-info">{t('about.presentation.challenged')}</span> {t('and')} <span className="has-text-info">{t('about.presentation.coding')}</span>.<br/>
                         {t('about.presentation.curious')} <span className="has-text-info">{t('about.presentation.learning')}</span> {t('about.presentation.life')}.<br/>
                     </p>

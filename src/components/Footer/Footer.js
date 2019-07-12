@@ -171,9 +171,14 @@ class Footer extends Component {
                 <div className="copyright has-text-centered has-text-light">
                     <p>Copyright © 2019</p>
                     <p>Developed by Bakary Tounkara</p>
-                    <a href="https://bulma.io">
-                        <img src={madeWithBulma} alt="Made with Bulma" width="163" height="31"/>
-                    </a>
+                    <p>
+                        Source on <a className="source" href="https://github.com/btounkara/portfolio">Github</a>
+                    </p>
+                    <p>
+                        <a href="https://bulma.io">
+                            <img src={madeWithBulma} alt="Made with Bulma" width="163" height="31"/>
+                        </a>
+                    </p>
                 </div>
             </div>
         </footer>

@@ -14,4 +14,14 @@ footer {
             color: #FFFFFF !important;
         }
     }    
+
+    .source {
+        border-bottom: solid 1px $light;
+        color: $light;
+
+        &:hover{
+            border-bottom: solid 1px $info !important;
+            color: $info !important;
+        }
+    }
 }
