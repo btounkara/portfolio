@@ -35,11 +35,11 @@ Assuming that Git and NPM are installed on your system.
 
 Do not hesitate on contacting at bak.tounkara.pro@gmail.com, if you have any question or if you have any suggestion related to code or UI/UX.
 
-[React]: <https://sweetalert2.github.io/>
-[Bulma]: <https://sweetalert2.github.io/>
-[Webpack]: <https://sweetalert2.github.io/>
-[Babel]: <https://sweetalert2.github.io/>
+[React]: <https://reactjs.org/>
+[Bulma]: <https://bulma.io/>
+[Webpack]: <https://webpack.js.org/>
+[Babel]: <https://babeljs.io/>/>
 [Sass]: <https://sass-lang.com/>
-[Lodash]: <https://sweetalert2.github.io/>
-[AOS]: <https://sweetalert2.github.io/>
+[Lodash]: <https://lodash.com/>
+[AOS]: <http://michalsnik.github.io/aos/>
 [Sweetalert 2]: <https://sweetalert2.github.io/>
