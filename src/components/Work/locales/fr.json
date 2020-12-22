@@ -1,45 +1,118 @@
 {
     "title": "Expériences",
-    "experiences" : [
+    "experiences": [
         {
-            "id": 1,
             "isWork": true,
-            "dates" : "Oct. 2016 - 2018",
-            "role" : "Ingénieur Web Fullstack",
+            "dates": "Sept. 2019 - Maintenant",
+            "role": "Ingénieur Web Fullstack",
             "establishment": {
-                "name" : "Klee Group",
-                "link" : "http://www.kleegroup.com",
+                "name": "Zenika",
+                "link": "http://www.zenika.com",
+                "domain": "Conseil en informatique",
+                "resume": "Cabinet d’innovation technologique, managériale et organisationnelle, qui accompagne les entreprises dans leur transformation numérique."
+            },
+            "tasks": [
+                "Développement frontend et backend, intégration continue (Maven, Sonar, Jenkins, XL Deploy, Docker & GIT), tests unitaires et intégration, refactoring de code et de base de données, déploiements de livrables sur différents environnements(Linux).",
+                "Développement d'une application web (Java, Play Framework, React, Redux) en cycle en V",
+                "Développement d'une nouvelle API REST from scratch (Java 11 / Spring boot)",
+                "Développement d'une application web et de ses micro services (Angular 11, NodeJs, RxJs, Mongo, Docker, Java) en SCRUM"
+            ],
+            "technologies": [
+                "Java 11",
+                "Spring",
+                "Spring boot",
+                "Spring batch",
+                "React",
+                "Redux",
+                "Angular 11",
+                "NodeJs", 
+                "RxJs",
+                "Mongoose",
+                "MariaDB",
+                "MySQL",
+                "Mongo",
+                "Maven",
+                "Git",
+                "Play Framework",
+                "Jenkins",
+                "Docker",
+                "Bitbucket",
+                "XL Deploy",
+                "Material UI"
+            ]
+        },
+        {
+            "isWork": true,
+            "dates": "Oct. 2018 - Août 2019",
+            "establishment": {
+                "name" : "Voyage au Canada & USA",
+                "link" : "https://fr.wikipedia.org/wiki/Canada",
+                "domain": "Veille technologique et développement de projets personnels",
+                "resume": "Voyage à l'étranger d'un an pendant laquelle j'ai pu faire de la veille technologique et découvrir de nouvelles technologies."
+            },
+            "tasks": [
+                "Découverte des technologies NodeJs, React et Angular via des cours OpenClassroom",
+                "Développement d'un portfolio avec ReactJS",
+                "Découverte d'outils tels que Webpack, Babel et Bulma",
+                "Développement d'une application mobile de sport téléchargable sur le Google PlayStore (Flash's Workout)"
+            ],
+            "technologies": [
+                "NodeJS", "ReactJS", "Angular", "Android Native (Java)", "Babel", "Bulma", "Webpack"
+            ]
+        },
+        {
+            "isWork": true,
+            "dates": "Oct. 2016 - 2018",
+            "role": "Ingénieur Web Fullstack",
+            "establishment": {
+                "name": "Klee Group",
+                "link": "http://www.kleegroup.com",
                 "domain": "Conseil en informatique",
                 "resume": "Conseil en système d'information, édition de progiciels, conception et réalisation de systèmes d'information."
             },
             "tasks": [
-                "Analyse et conception (UML), Rédaction de spécifications, développement, intégration continue (Maven, Sonar, Jenkins & SVN/GIT), tests unitaires(JUnit), refactoring de code et de base de données, déploiements de livrables sur différents environnements(Linux).",
+                "Analyse et conception (UML), rédaction de spécifications, développement, intégration continue (Maven, Sonar, Jenkins & SVN/GIT), tests unitaires(JUnit), refactoring de code et de base de données, déploiements de livrables sur différents environnements(Linux).",
                 "Développement de plusieurs applications web utilisant les méthodologies SCRUM et cycle en V",
                 "Création d'une application web (from scratch) avec des fonctionnalités cartographiques utilisant Geoserver, OpenLayers(2 & 3), PostgreSQL et PostGIS.",
                 "Implémentation d'un centre de notification utilisant des webservices REST et une base de données REDIS(NoSQL)",
                 "Ajout d'un portail d'authentification basé sur le protocole CAS sur une application existante"
             ],
             "technologies": [
-                "Java (J2EE)", "PHP", "Struts2", "OpenLayers", "Geoserver", "PostgreSQL", "PostGIS","Redis(NoSQL)",
-                "Maven", "Sonar", "SVN", "Git", "HTML5", "CSS3", "Javascript", "Jquery", "Bootstrap"
+                "Java (J2EE)",
+                "PHP",
+                "Struts2",
+                "OpenLayers",
+                "Geoserver",
+                "PostgreSQL",
+                "PostGIS",
+                "Redis(NoSQL)",
+                "Maven",
+                "Sonar",
+                "SVN",
+                "Git",
+                "HTML5",
+                "CSS3",
+                "Javascript",
+                "Jquery",
+                "Bootstrap"
             ]
-        }, {
-            "id": 2,
+        },
+        {
             "isWork": false,
-            "dates" : "Oct. 2016",
-            "role" : "Diplôme d'ingénieur",
+            "dates": "Oct. 2016",
+            "role": "Diplôme d'ingénieur",
             "establishment": {
-                "name" : "EFREI",
-                "link" : "https://www.ca-consumerfinance.com/"
+                "name": "EFREI",
+                "link": "https://www.ca-consumerfinance.com/"
             }
-        }, {
-            "id": 3,
+        },
+        {
             "isWork": true,
-            "dates" : "Sept. 2013 - 2016",
-            "role" : "Ingénieur Web Fullstack",
+            "dates": "Sept. 2013 - 2016",
+            "role": "Ingénieur Web Fullstack",
             "establishment": {
-                "name" : "CA Consumer Finance",
-                "link" : "https://www.ca-consumerfinance.com/",
+                "name": "CA Consumer Finance",
+                "link": "https://www.ca-consumerfinance.com/",
                 "domain": "Crédit à la consommation",
                 "resume": "Solutions de financement, de courtage et d'assurance."
             },
@@ -50,26 +123,40 @@
                 "Proposition et implémentation d'un nouveau design pour l'application en utilisant Bootstrap et d'autres libraries javascript."
             ],
             "technologies": [
-                "Java", "COBOL", "Hibernate", "DB2", "Spring MVC", "SQL", "XML", "JSP", "Bootstrap", 
-                "Maven", "Sonar", "SVN", "HTML5", "CSS3", "Javascript", "Jquery"
+                "Java",
+                "COBOL",
+                "Hibernate",
+                "DB2",
+                "Spring MVC",
+                "SQL",
+                "XML",
+                "JSP",
+                "Bootstrap",
+                "Maven",
+                "Sonar",
+                "SVN",
+                "HTML5",
+                "CSS3",
+                "Javascript",
+                "Jquery"
             ]
-        }, {
-            "id": 4,
+        },
+        {
             "isWork": false,
-            "dates" : "Juillet 2013",
-            "role" : "DUT Informatique",
+            "dates": "Juil. 2013",
+            "role": "DUT Informatique",
             "establishment": {
-                "name" : "Université Paris V Descartes",
-                "link" : "https://www.assurpeople.com/"
+                "name": "Université Paris V Descartes",
+                "link": "https://www.assurpeople.com/"
             }
-        }, {
-            "id": 5,
+        },
+        {
             "isWork": true,
-            "dates" : "Avril - Juin 2013",
-            "role" : "Développeur web",
+            "dates": "Avril - Juin 2013",
+            "role": "Développeur web",
             "establishment": {
-                "name" : "AssurPeople",
-                "link" : "https://www.assurpeople.com/",
+                "name": "AssurPeople",
+                "link": "https://www.assurpeople.com/",
                 "domain": "Courtier en assurance",
                 "resume": "Fournisseur de solutions de courtage et d’assurance."
             },
@@ -78,7 +165,14 @@
                 "Développement d’une application web de gestion des congés."
             ],
             "technologies": [
-                "Php", "MySQL", "WampServer", "HTML5", "CSS3", "Javascript", "Jquery", "SQL"
+                "Php",
+                "MySQL",
+                "WampServer",
+                "HTML5",
+                "CSS3",
+                "Javascript",
+                "Jquery",
+                "SQL"
             ]
         }
     ]

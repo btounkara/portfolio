@@ -1,4 +1,4 @@
-import React , {Component} from 'react'
+import React, { Component } from 'react'
 import Experience from '../Experience/Experience';
 import Modal from '../Modal/Modal';
 import { withTranslation } from 'react-i18next';
@@ -6,7 +6,7 @@ import { withTranslation } from 'react-i18next';
 const TABLET = 769;
 const DURATION_ANIMATION = 150;
 const INITIAL_MODAL = {
-    id: 0,
+    id: '',
     isWork: false,
     role: '',
     dates: '',
@@ -21,8 +21,8 @@ const INITIAL_MODAL = {
 }
 
 class Work extends Component {
-    
-    constructor(props){
+
+    constructor(props) {
         super(props);
         this.state = {
             timelineCentered: window.innerWidth >= TABLET,
@@ -34,7 +34,7 @@ class Work extends Component {
     componentDidMount() {
         window.addEventListener("resize", this.handleWindowResize);
     }
-    
+
     componentWillUnmount() {
         window.removeEventListener("resize", this.handleWindowResize);
     }
@@ -58,32 +58,33 @@ class Work extends Component {
         })
     }
 
-    render(){
+    render() {
         const { timelineCentered, isModalShown, modalData } = this.state;
         const { t } = this.props;
-        const experiences = t('work.experiences', {returnObjects: true});
+        const experiences = t('work.experiences', { returnObjects: true });
+        const currentYear = new Date().getFullYear();
         return <section id="work" className="hero is-fullheight">
             <div className="hero-body">
                 <div className="container">
-                    <h1 className="title has-text-white is-with-bar" 
+                    <h1 className="title has-text-white is-with-bar"
                         id="work-title"
                         data-aos="fade-in"
                     >
                         {t('work.title')}
                     </h1>
-                        
+
                     <div id="timeline" className={`timeline ${timelineCentered && 'is-centered'}`}>
                         <header className="timeline-header"
                             data-aos="fade-in"
                             data-aos-delay="100"
                         >
-                            <span className="tag is-medium is-light is-rounded">2019</span>
+                            <span className="tag is-medium is-light is-rounded">{currentYear}</span>
                         </header>
 
                         {
-                            experiences.map((exp, index) => 
-                                <Experience 
-                                    key={exp.id}
+                            experiences.map((exp, index) =>
+                                <Experience
+                                    key={index}
                                     value={exp}
                                     delay={(index + 1) * DURATION_ANIMATION}
                                     openModal={this.openModal}
@@ -100,7 +101,7 @@ class Work extends Component {
 
                     </div>
 
-                    <Modal 
+                    <Modal
                         closeModal={this.closeModal}
                         isShown={isModalShown}
                         data={modalData}

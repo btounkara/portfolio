@@ -44,8 +44,21 @@ class Index extends Component {
     document.getElementById('index').classList.remove('blur');
   }
 
+  updateProgressBar = () => {
+    const windowScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    const scrolled = windowScroll / (document.documentElement.scrollHeight - document.documentElement.clientHeight) * 100;
+    document.getElementById('progressBar').style.width = scrolled + '%';
+  };
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.updateProgressBar);
+  }
+
   render() {
     return <div>
+        <div className="progress-container">
+          <div className="progress-bar" id="progressBar"></div>
+        </div>
         <Navbar onClick={this.scrollTo} closeMenu={this.closeMenu}/>
         <Social isFixed={true} animation="slide-up"/>
         <Header onClick={this.scrollTo}/>

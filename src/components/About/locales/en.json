@@ -5,7 +5,7 @@
         "end": "Nice to meet you"
     },
     "presentation": {
-        "me": "I'm a 25 years old french",
+        "me": "I'm a 27 years old french",
         "role": "Fullstack Web Developer",
         "based": "based next to",
         "solver": "I'm a problem solver and a thinker who enjoys",
@@ -21,17 +21,23 @@
             "name": "Paris Descartes University",
             "degree": "(Bachelero's degree)"
         },
+        "and": "and",
         "efrei": {
             "name": "EFREI",
             "degree": "(Master's degree)"
-        },
-        "and": "and",
-        "work": {
+        }
+    },
+    "work": {
+        "klee": {
             "start": "Shortly after that, I've worked for",
             "end": "for 2 years where I had the chance to work on a variety of interesting and challenging projects on a daily basis"
         },
-        "dream": "Then, at the end of 2018, I decided to make one of my dream come true by traveling all around Canada during almost a year to discover and enjoy its culture."
+        "zenika": {
+            "start": "When I came back to France in September 2019, I started working at ",
+            "end": "in an environment in which I can learn new things everyday."
+        }
     },
+    "dream": "Then, at the end of 2018, I decided to make one of my dream come true by traveling all around Canada during almost a year to discover and enjoy its culture.",
     "languagesSpoken": "Here's a list of languages I speak",
     "recently": {
         "start": "Recently I've been working with",

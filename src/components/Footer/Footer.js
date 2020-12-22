@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import axios from "axios" // For making client request.
+import axios from 'axios'
 import swal from 'sweetalert2'
 import './Footer.scss'
 import madeWithBulma from '../../images/made-with-bulma.png'

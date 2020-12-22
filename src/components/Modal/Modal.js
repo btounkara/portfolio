@@ -15,7 +15,12 @@ export default function Modal({ closeModal, isShown, data }){
                     
                     <div className="block">
                         <h1 className="title is-4 has-text-dark">
-                            {data.role} <a href={data.establishment.link} className="has-text-info">@{data.establishment.name}</a>
+                            {data.role} 
+                            {
+                                data.role 
+                                ? <a href={data.establishment.link} className="has-text-info">@{data.establishment.name}</a>
+                                : data.establishment.name
+                            }
                         </h1>
                         <p className="subtitle is-6 has-text-grey-dark">{data.dates}</p>
                     </div>
@@ -70,7 +75,6 @@ Modal.propTypes = {
     closeModal: PropTypes.func.isRequired,
     isShown: PropTypes.bool.isRequired,
     data: PropTypes.shape({
-        id: PropTypes.number.isRequired,
         isWork: PropTypes.bool.isRequired,
         dates : PropTypes.string.isRequired,        
         role : PropTypes.string.isRequired,
