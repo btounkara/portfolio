@@ -1,14 +1,98 @@
 {
     "title": "Work experiences",
-    "experiences" : [
+    "experiences": [
         {
-            "id": 1,
             "isWork": true,
-            "dates" : "Oct. 2016 - 2018",
-            "role" : "Fullstack Software Engineer",
+            "dates": "Sept. 2019 - Now",
+            "role": "Fullstack Software Engineer",
             "establishment": {
-                "name" : "Klee Group",
-                "link" : "http://www.kleegroup.com",
+                "name": "Zenika",
+                "link": "http://www.zenika.com",
+                "domain": "IT consulting, realization and training",
+                "resume": "Specialized in software architecture and Agile methods with a threefold-expertise in consulting, realization and training."
+            },
+            "tasks": [
+                "Frontend and backend development, continuous integration (Maven, Sonar, Jenkins, XL Deploy, Docker & GIT), code and database refactoring, deployment on multiple environments.",
+                "Developed a web application (Java, Play Framework, React, Redux) using V-Model ",
+                "Added an authentication portal based on CAS protocol to an existing web application.",
+                "Built a new REST API from scratch using Java 11 and Spring boot",
+                "Developed a web application and its multiple micro services (Angular 11, NodeJs, RxJs, Mongo, Docker, Java) with SCRUM"
+            ],
+            "technologies": [
+                "Java 11",
+                "Spring",
+                "Spring boot",
+                "Spring batch",
+                "React",
+                "Redux",
+                "Angular 11",
+                "NodeJs", 
+                "RxJs",
+                "Mongoose",
+                "MariaDB",
+                "MySQL",
+                "Mongo",
+                "Maven",
+                "Git",
+                "Play Framework",
+                "Jenkins",
+                "Docker",
+                "Bitbucket",
+                "XL Deploy",
+                "Material UI"
+            ]
+        },
+        {
+            "dates": "Nov. 2018 - Juil. 2019",
+            "establishment": {
+                "name": "Traveling for a year in Canada and USA"
+            }
+        },
+        {
+            "isWork": true,
+            "dates": "Oct. 2018 - Août 2019",
+            "establishment": {
+                "name" : "Traveling for a year in Canada and USA",
+                "link" : "https://en.wikipedia.org/wiki/Canada",
+                "domain": "Technological watch and development of personal projects",
+                "resume": "I travaled during a whole year throughout Canada and USA and used that to time to learn about technologies I didn't know and to develop some apps."
+            },
+            "tasks": [
+                "Learning to work with NodeJs, React and Angular with the help of OpenClassroom's courses",
+                "Development of my portfolio using ReactJS",
+                "Learning of using tools such as Webpack, Babel and Bulma",
+                "Developed an Android workout application that can be downloaded on Google's PlayStore (Flash's Workout)"
+            ],
+            "technologies": [
+                "NodeJS", "ReactJS", "Angular", "Android Native (Java)", "Babel", "Bulma", "Webpack"
+            ]
+        },
+        {
+            "isWork": true,
+            "dates": "Oct. 2018 - Aug. 2019",
+            "establishment": {
+                "name" : "Traveling for a year throughout Canada and USA",
+                "link" : "https://en.wikipedia.org/wiki/Canada",
+                "domain": "Technological watch and development of personal projects",
+                "resume": "I traveled during a year throughout Canada and USA and took the opportunity to learn about new technologies."
+            },
+            "tasks": [
+                "Learning to use NodeJs, React et Angular with the help of OpenClassroom's courses",
+                "Development of my portfolio using ReactJS",
+                "Learning to use tools such as Webpack, Babel et Bulma",
+                "Development of an Android workout application that can be downloaded on Google's PlayStore (Flash's Workout)"
+            ],
+            "technologies": [
+                "NodeJS", "ReactJS", "Angular", "Android Native (Java)", "Babel", "Bulma", "Webpack"
+            ]
+        },
+        {
+            "isWork": true,
+            "dates": "Oct. 2016 - 2018",
+            "role": "Fullstack Software Engineer",
+            "establishment": {
+                "name": "Klee Group",
+                "link": "http://www.kleegroup.com",
                 "domain": "IT Consulting",
                 "resume": "Software publishing & implementing IT systems."
             },
@@ -20,26 +104,41 @@
                 "Added an authentication portal based on CAS protocol to an existing web application."
             ],
             "technologies": [
-                "Java (J2EE)", "PHP", "Struts2", "OpenLayers", "Geoserver", "PostgreSQL", "PostGIS","Redis(NoSQL)",
-                "Maven", "Sonar", "SVN", "Git", "HTML5", "CSS3", "Javascript", "Jquery", "Bootstrap"
+                "Java (J2EE)",
+                "PHP",
+                "Struts2",
+                "OpenLayers",
+                "Geoserver",
+                "PostgreSQL",
+                "PostGIS",
+                "Redis(NoSQL)",
+                "Maven",
+                "Sonar",
+                "SVN",
+                "Git",
+                "HTML5",
+                "CSS3",
+                "Javascript",
+                "Jquery",
+                "Bootstrap"
             ]
-        }, {
-            "id": 2,
+        },
+        {
             "isWork": false,
-            "dates" : "Oct. 2016",
-            "role" : "Master's degree",
+            "dates": "Oct. 2016",
+            "role": "Master's degree",
             "establishment": {
-                "name" : "EFREI",
-                "link" : "https://www.ca-consumerfinance.com/"
+                "name": "EFREI",
+                "link": "https://www.ca-consumerfinance.com/"
             }
-        }, {
-            "id": 3,
+        },
+        {
             "isWork": true,
-            "dates" : "Sept. 2013 - 2016",
-            "role" : "Fullstack Software Engineer",
+            "dates": "Sept. 2013 - 2016",
+            "role": "Fullstack Software Engineer",
             "establishment": {
-                "name" : "CA Consumer Finance",
-                "link" : "https://www.ca-consumerfinance.com/",
+                "name": "CA Consumer Finance",
+                "link": "https://www.ca-consumerfinance.com/",
                 "domain": "Credit Consumer Market",
                 "resume": "Financing, brokerage, and insurance solutions."
             },
@@ -50,26 +149,40 @@
                 "Proposed and implmented a new design of the web application using Bootstrap."
             ],
             "technologtechnologiesies": [
-                "Java", "COBOL", "Hibernate", "DB2", "Spring MVC", "SQL", "XML", "JSP", "Bootstrap", 
-                "Maven", "Sonar", "SVN", "HTML5", "CSS3", "Javascript", "Jquery"
+                "Java",
+                "COBOL",
+                "Hibernate",
+                "DB2",
+                "Spring MVC",
+                "SQL",
+                "XML",
+                "JSP",
+                "Bootstrap",
+                "Maven",
+                "Sonar",
+                "SVN",
+                "HTML5",
+                "CSS3",
+                "Javascript",
+                "Jquery"
             ]
-        }, {
-            "id": 4,
+        },
+        {
             "isWork": false,
-            "dates" : "July 2013",
-            "role" : "Bachelor's degree",
+            "dates": "July 2013",
+            "role": "Bachelor's degree",
             "establishment": {
-                "name" : "Paris Descartes University",
-                "link" : "https://www.assurpeople.com/"
+                "name": "Paris Descartes University",
+                "link": "https://www.assurpeople.com/"
             }
-        }, {
-            "id": 5,
+        },
+        {
             "isWork": true,
-            "dates" : "April - June 2013",
-            "role" : "Web Developer",
+            "dates": "April - June 2013",
+            "role": "Web Developer",
             "establishment": {
-                "name" : "AssurPeople",
-                "link" : "https://www.assurpeople.com/",
+                "name": "AssurPeople",
+                "link": "https://www.assurpeople.com/",
                 "domain": "Insurance Broker",
                 "resume": "Brokerage and insurance solutions providing."
             },
@@ -78,7 +191,14 @@
                 "Developed a web application used to handle company\"s leave management."
             ],
             "technologies": [
-                "Php", "MySQL", "WampServer", "HTML5", "CSS3", "Javascript", "Jquery", "SQL"
+                "Php",
+                "MySQL",
+                "WampServer",
+                "HTML5",
+                "CSS3",
+                "Javascript",
+                "Jquery",
+                "SQL"
             ]
         }
     ]

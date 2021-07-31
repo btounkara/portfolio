@@ -7,7 +7,7 @@
     "presentation": {
         "me": "Je suis un",
         "role": "Ingénieur Web Fullstack",
-        "based": "français de 25 ans habitant près de",
+        "based": "français de 27 ans habitant près de",
         "solver": "J'aime résoudre des problématiques, ",
         "challenged": "relever des défis",
         "coding": "coder des applications",
@@ -25,13 +25,19 @@
         "efrei": {
             "name": "l'EFREI",
             "degree": "(Diplôme d'ingénieur)"
-        },
-        "work": {
+        }
+    },
+    "work": {
+        "klee": {
             "start": "Après l'obtention de mes diplômes, j'ai travaillé pour",
             "end": "pendant 2 ans. C'est une ESN dans laquelle j'ai eu l'opportunité de travailler sur des projets variés, captivants et challengeants"
         },
-        "dream": "Suite à ça, à la fin de l'année 2018, j'ai décidé de réaliser un de mes rêves d'enfant : un voyage à travers le Canada pendant 1 an afin d'y découvrir et apprécier sa culture ainsi que ses merveilleux paysages."
+        "zenika": {
+            "start": "Je travaille désormais au sein de l'ESN ",
+            "end": "depuis mon retour en France en septembre 2019, c'est un cabinet d’innovation technologique, managériale et organisationnelle, qui accompagne les entreprises dans leur transformation numérique et évolue dans un environnement me permettant d'en apprendre plus chaque jour."
+        }
     },
+    "dream": "Suite à ça, à la fin de l'année 2018, j'ai décidé de réaliser un de mes rêves d'enfant : un voyage à travers le Canada pendant 1 an afin d'y découvrir et apprécier sa culture ainsi que ses merveilleux paysages.",
     "languagesSpoken": "Voici les langages dans lesquels je développe",
     "recently": {
         "start": "J'ai récemment travaillé avec",

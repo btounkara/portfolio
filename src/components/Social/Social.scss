@@ -20,7 +20,7 @@
         width: 40px;
         position: fixed;
         bottom: 0px;
-        color: rgb(168, 178, 209);
+        color: $blue-lighter;
         left: 40px;
 
         @include until($tablet){
