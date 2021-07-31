@@ -15,7 +15,7 @@ const logos = [
     }
 ];
 
-const Social = ({isFixed, animation, delay}) => (
+const Social = ({ isFixed, animation, delay }) => (
     <div className={`social ${isFixed ? 'is-fixed' : ''}`} data-aos={animation} data-aos-delay={delay}>
         <ul>
             {
