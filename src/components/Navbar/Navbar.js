@@ -1,9 +1,9 @@
-import React, {Component} from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import resume from '../../pdf/Resume - Bakary TOUNKARA.pdf';
 import cv from '../../pdf/CV - Bakary TOUNKARA.pdf';
 import './Navbar.scss';
-import { withTranslation } from 'react-i18next';
+import { useTranslation, withTranslation } from 'react-i18next';
 import i18n from 'i18next';
 
 const MIN_SCROLL_POS = 10;
@@ -32,60 +32,51 @@ const english = {
   en:'en'
 };
 
-class Navbar extends Component {
-  
-  constructor(props){
-    super(props);
-    this.state = {
-      show: true,
-      scrollPos: 0,
-      lng: i18n.language
-    };
-  }
+const Navbar = ({ onClick }) => {
+  const [show, setShow] = useState(true);
+  const [scrollPos, setScrollPos] = useState(0);
+  const [language, setLanguage] = useState(i18n.language);
 
-  componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll);
+  useEffect(() => { i18n.changeLanguage(language) }, [language])
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
     // Get all "navbar-burger" elements
     const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
     // Check if there are any navbar burgers
     if ($navbarBurgers.length > 0) {
       // Add a click event on each of them
-      $navbarBurgers.forEach(el => el.addEventListener('click', this.handleBurgerClick));
+      $navbarBurgers.forEach(el => el.addEventListener('click', handleBurgerClick));
     }
-  }
-  
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll);
-    // Get all "navbar-burger" elements
-    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-    // Check if there are any navbar burgers
-    if ($navbarBurgers.length > 0) {
-      // Remove the click event on each of them
-      $navbarBurgers.forEach(el => el.removeEventListener('click', this.handleBurgerClick));
-    }
-  }
 
-  handleScroll = () => {
-    const { scrollPos, show } = this.state;
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      // Check if there are any navbar burgers
+      if ($navbarBurgers.length > 0) {
+        // Remove the click event on each of them
+        $navbarBurgers.forEach(el => el.removeEventListener('click', handleBurgerClick));
+      }
+    }
+  });
+
+  const handleScroll = () => {
     const newScrollPos = Math.abs(document.body.getBoundingClientRect().top);
     
     // If the scroll is smaller than the SCROLL_DELTA, we do nothing
-    if(Math.abs(newScrollPos - scrollPos) <= SCROLL_DELTA && newScrollPos > 0){
+    if (Math.abs(newScrollPos - scrollPos) <= SCROLL_DELTA && newScrollPos > 0) {
       return;
     }
 
     const newShow = newScrollPos < scrollPos || newScrollPos <= MIN_SCROLL_POS;
     if(show && !newShow){
-      this.props.closeMenu();
+      closeMenu();
     }
 
-    this.setState({
-      scrollPos: newScrollPos,
-      show: newShow
-    });
+    setShow(newShow);
+    setScrollPos(newScrollPos);
   }
 
-  handleBurgerClick = () => {
+  const handleBurgerClick = () => {
     const navbar = document.getElementById('nav');
     const burger = document.getElementById('navBurger');
     const menu = document.getElementById('navMenu');
@@ -102,76 +93,73 @@ class Navbar extends Component {
     }
   }
 
-  handleChangeLng = (e) => {
-    const curLng = i18n.language;
-    const lng = curLng === french.fr ? english.en : french.fr;
-    this.setState({ lng: lng }, () => {
-      i18n.changeLanguage(lng);
-    });
+  const handleChangeLng = (e) => {
+    const currentLanguage = i18n.language;
+    const language = currentLanguage === french.fr ? english.en : french.fr;
+    setLanguage(currentLanguage === french.fr ? english.en : french.fr);
   }
 
-  render(){
-    const { onClick, t } = this.props;
-    return <nav id="nav" className={`navbar has-background-dark has-text-white is-light is-fixed-top ${this.state.show ? 'scrolled-in' : 'scrolled-out'}`}>
+  const { t } = useTranslation();
 
-      { /* Logo and hamburger */ }
-      <div className="navbar-brand">
-        <a id="navBurger" role="button" className="navbar-burger burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
-      </div>
+  return <nav id="nav" className={`navbar has-background-dark has-text-white is-light is-fixed-top ${show ? 'scrolled-in' : 'scrolled-out'}`}>
 
-      <div id="navMenu" className="navbar-menu">
+    { /* Logo and hamburger */ }
+    <div className="navbar-brand">
+      <a id="navBurger" role="button" className="navbar-burger burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
 
-        <div className="navbar-end">
-          
-          <div className="navbar-item"
-            data-aos="fade-down"
-            data-aos-delay="0"
-          >
-            <p className="control has-text-centered-touch">
-              <a className="button is-light is-outlined is-small is-rounded"
-                title={ this.state.lng === french.fr ? english.name : french.name }
-                onClick={this.handleChangeLng}
-              >
-                { this.state.lng === french.fr ? english.en : french.fr }
-              </a>
-            </p>
-          </div>
-          
-          {
-            menuItems.map(item => 
-              <a className="navbar-item has-text-centered-touch" 
-                key={item.sectionLink}
-                onClick={() => onClick(item.sectionLink)}
-                data-aos="fade-down"
-                data-aos-delay={item.delay}
-              >
-                {t(`navbar.${item.sectionLink}`)}
-              </a>  
-            )
-          }
-                            
-          <div className="navbar-item"
-            data-aos="fade-down"
-            data-aos-delay="450"
-          >
-            <p className="control has-text-centered-touch">
-              <a className="button is-rounded is-light is-outlined" href={ this.state.lng === french.fr ? cv : resume } target="_blank">
-                <span className="icon">
-                  <i className="fas fa-download"></i>
-                </span>
-                <span>{t('navbar.resume')}</span>
-              </a>
-            </p>
-          </div>
+    <div id="navMenu" className="navbar-menu">
+
+      <div className="navbar-end">
+        
+        <div className="navbar-item"
+          data-aos="fade-down"
+          data-aos-delay="0"
+        >
+          <p className="control has-text-centered-touch">
+            <a className="button is-light is-outlined is-small is-rounded"
+              title={ language === french.fr ? english.name : french.name }
+              onClick={handleChangeLng}
+            >
+              { language === french.fr ? english.en : french.fr }
+            </a>
+          </p>
         </div>
-
+        
+        {
+          menuItems.map(item => 
+            <a className="navbar-item has-text-centered-touch" 
+              key={item.sectionLink}
+              onClick={() => onClick(item.sectionLink)}
+              data-aos="fade-down"
+              data-aos-delay={item.delay}
+            >
+              {t(`navbar.${item.sectionLink}`)}
+            </a>  
+          )
+        }
+                          
+        <div className="navbar-item"
+          data-aos="fade-down"
+          data-aos-delay="450"
+        >
+          <p className="control has-text-centered-touch">
+            <a className="button is-rounded is-light is-outlined" href={ language === french.fr ? cv : resume } target="_blank">
+              <span className="icon">
+                <i className="fas fa-download"></i>
+              </span>
+              <span>{t('navbar.resume')}</span>
+            </a>
+          </p>
+        </div>
       </div>
-    </nav>
-  }
+
+    </div>
+  </nav>
 }
 
 Navbar.propTypes = {
