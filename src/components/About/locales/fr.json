@@ -1,47 +1,50 @@
 {
-    "title": "A propos de moi",
-    "hello": {
-        "start": "Hello world. Je m'appelle",
-        "end": "Enchanté"
+  "title": "A propos de moi",
+  "hello": {
+    "start": "Hello world. Je m'appelle",
+    "end": "Enchanté"
+  },
+  "presentation": {
+    "me": "Je suis un",
+    "role": "Ingénieur Web Fullstack",
+    "based": "français de 29 ans habitant près de",
+    "solver": "J'aime résoudre des problématiques, ",
+    "challenged": "relever des défis",
+    "coding": "coder des applications",
+    "curious": "Je suis quelqu'un de curieux et passionné qui adore",
+    "learning": "en apprendre toujours plus",
+    "life": "aussi bien professionnellement que dans ma vie personnelle"
+  },
+  "school": {
+    "start": "Je suis diplômé de l'université",
+    "descartes": {
+      "name": "Paris V Descartes",
+      "degree": "(DUT Informatique)"
     },
-    "presentation": {
-        "me": "Je suis un",
-        "role": "Ingénieur Web Fullstack",
-        "based": "français de 27 ans habitant près de",
-        "solver": "J'aime résoudre des problématiques, ",
-        "challenged": "relever des défis",
-        "coding": "coder des applications",
-        "curious": "Je suis quelqu'un de curieux et passionné qui adore",
-        "learning": "en apprendre toujours plus",
-        "life": "aussi bien professionnellement que dans ma vie personnelle"
+    "and": "et de",
+    "efrei": {
+      "name": "l'EFREI",
+      "degree": "(Diplôme d'ingénieur)"
+    }
+  },
+  "work": {
+    "klee": {
+      "start": "Après l'obtention de mes diplômes, j'ai travaillé pour",
+      "end": "pendant 2 ans. C'est une ESN dans laquelle j'ai eu l'opportunité de travailler sur des projets variés, captivants et challengeants"
     },
-    "school": {
-        "start": "Je suis diplômé de l'université",
-        "descartes": {
-            "name": "Paris V Descartes",
-            "degree": "(DUT Informatique)"
-        },
-        "and": "et de",
-        "efrei": {
-            "name": "l'EFREI",
-            "degree": "(Diplôme d'ingénieur)"
-        }
+    "zenika": {
+      "start": "Je rentre ensuite en France et commence à travailler pour",
+      "end": "en septembre 2019. Il s'agit d'un cabinet d'innovation technologique, managériale et organisationnelle, qui accompagne les entreprises dans leur transformation numérique et évolue dans un environnement me permettant d'en apprendre plus chaque jour."
     },
-    "work": {
-        "klee": {
-            "start": "Après l'obtention de mes diplômes, j'ai travaillé pour",
-            "end": "pendant 2 ans. C'est une ESN dans laquelle j'ai eu l'opportunité de travailler sur des projets variés, captivants et challengeants"
-        },
-        "zenika": {
-            "start": "Je travaille désormais au sein de l'ESN ",
-            "end": "depuis mon retour en France en septembre 2019, c'est un cabinet d’innovation technologique, managériale et organisationnelle, qui accompagne les entreprises dans leur transformation numérique et évolue dans un environnement me permettant d'en apprendre plus chaque jour."
-        }
-    },
-    "dream": "Suite à ça, à la fin de l'année 2018, j'ai décidé de réaliser un de mes rêves d'enfant : un voyage à travers le Canada pendant 1 an afin d'y découvrir et apprécier sa culture ainsi que ses merveilleux paysages.",
-    "languagesSpoken": "Voici les langages dans lesquels je développe",
-    "recently": {
-        "start": "J'ai récemment travaillé avec",
-        "end": "ces technologies"
-    },
-    "developmentTools": "Les outils de développement que j'utilise sont"
+    "freelance": {
+      "start": "Enfin, après 2 ans au sein de Zenika, je décide de quitter la société afin de m'orienter vers le monde du freelance. Je suis donc depuis Février 2022, Ingénieur Web Fullstack en freelance via le statut du portage salarial. Je suis actuellement en mission chez Atexo, un éditeur de logiciel pour les acteurs publics dont le métier est d'innover pour transformer les processus métiers du secteur public."
+    }
+  },
+  "dream": "Suite à ça, à la fin de l'année 2018, je décide de réaliser un de mes rêves d'enfant : un voyage à travers le Canada pendant 1 an afin d'y découvrir et apprécier sa culture ainsi que ses merveilleux paysages.",
+  "languagesSpoken": "Voici les langages dans lesquels je développe",
+  "recently": {
+    "start": "J'ai récemment travaillé avec",
+    "end": "ces technologies"
+  },
+  "developmentTools": "Ci-dessous une liste (non exhaustive) des outils de développement que j'utilise "
 }

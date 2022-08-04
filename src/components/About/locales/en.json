@@ -1,47 +1,50 @@
 {
-    "title": "About me",
-    "hello": {
-        "start": "Hello world. I'm",
-        "end": "Nice to meet you"
+  "title": "About me",
+  "hello": {
+    "start": "Hello world. I'm",
+    "end": "Nice to meet you"
+  },
+  "presentation": {
+    "me": "I'm a 29 years old french",
+    "role": "Fullstack Web Developer",
+    "based": "based next to",
+    "solver": "I'm a problem solver and a thinker who enjoys",
+    "challenged": "being challenged",
+    "coding": "coding apps",
+    "curious": "I tend to be curious and love",
+    "learning": "learning new things",
+    "life": "in IT as well as in everyday's life"
+  },
+  "school": {
+    "start": "I'm a software engineer graduated from both",
+    "descartes": {
+      "name": "Paris Descartes University",
+      "degree": "(Bachelero's degree)"
     },
-    "presentation": {
-        "me": "I'm a 27 years old french",
-        "role": "Fullstack Web Developer",
-        "based": "based next to",
-        "solver": "I'm a problem solver and a thinker who enjoys",
-        "challenged": "being challenged",
-        "coding": "coding apps",
-        "curious": "I tend to be curious and love",
-        "learning": "learning new things",
-        "life": "in IT as well as in everyday's life"
+    "and": "and",
+    "efrei": {
+      "name": "EFREI",
+      "degree": "(Master's degree)"
+    }
+  },
+  "work": {
+    "klee": {
+      "start": "Shortly after that, I've worked for",
+      "end": "for 2 years where I had the chance to work on a variety of interesting and challenging projects on a daily basis"
     },
-    "school": {
-        "start": "I'm a software engineer graduated from both",
-        "descartes": {
-            "name": "Paris Descartes University",
-            "degree": "(Bachelero's degree)"
-        },
-        "and": "and",
-        "efrei": {
-            "name": "EFREI",
-            "degree": "(Master's degree)"
-        }
+    "zenika": {
+      "start": "When I came back to France in September 2019, I started working at ",
+      "end": "in an environment in which I was able to learn new things on a daily basis."
     },
-    "work": {
-        "klee": {
-            "start": "Shortly after that, I've worked for",
-            "end": "for 2 years where I had the chance to work on a variety of interesting and challenging projects on a daily basis"
-        },
-        "zenika": {
-            "start": "When I came back to France in September 2019, I started working at ",
-            "end": "in an environment in which I can learn new things everyday."
-        }
-    },
-    "dream": "Then, at the end of 2018, I decided to make one of my dream come true by traveling all around Canada during almost a year to discover and enjoy its culture.",
-    "languagesSpoken": "Here's a list of languages I speak",
-    "recently": {
-        "start": "Recently I've been working with",
-        "end": "these technologies"
-    },
-    "developmentTools": "The development tools I use"
+    "freelance": {
+      "start": "At the end of 2021, I decided to quit Zenika so that I can start working as a Freelance Fullstack Web Developer. I'm currently working at Atexo which is a software publisher for public actors whose business is to innovate to transform business processes in the public sector."
+    }
+  },
+  "dream": "Then, at the end of 2018, I decided to make one of my dream come true by traveling all around Canada during almost a year to discover and enjoy its culture.",
+  "languagesSpoken": "Here's a list of languages I speak",
+  "recently": {
+    "start": "Recently I've been working with",
+    "end": "these technologies"
+  },
+  "developmentTools": "Here's a list of development tools I've been using"
 }

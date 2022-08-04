@@ -1,21 +1,21 @@
-import React, {Component} from "react";
-import ReactDOM from "react-dom";
+import React, { Component } from 'react';
+import { createRoot } from 'react-dom/client'
 import Header from './components/Header/Header'
 import Navbar from './components/Navbar/Navbar'
-import About from "./components/About/About";
-import Work from "./components/Work/Work";
-import Footer from "./components/Footer/Footer";
-import Social from "./components/Social/Social";
+import About from './components/About/About';
+import Work from './components/Work/Work';
+import Footer from './components/Footer/Footer';
+import Social from './components/Social/Social';
 import AOS from 'aos';
 import './i18n';
-import './main.scss';
 import 'aos/src/sass/aos.scss';
+import './main.scss';
 
 // Font Awesome 5 (Free)
-import '@fortawesome/fontawesome-free/scss/fontawesome.scss'
-import '@fortawesome/fontawesome-free/scss/solid.scss' // https://fontawesome.com/icons?d=gallery&s=solid&m=free
-import '@fortawesome/fontawesome-free/scss/regular.scss' // https://fontawesome.com/icons?d=gallery&s=regular&m=free
-import '@fortawesome/fontawesome-free/scss/brands.scss' // https://fontawesome.com/icons?d=gallery&s=brands&m=free
+import '@fortawesome/fontawesome-free/js/fontawesome'
+import '@fortawesome/fontawesome-free/js/solid'
+import '@fortawesome/fontawesome-free/js/regular'
+import '@fortawesome/fontawesome-free/js/brands'
 
 class Index extends Component {
 
@@ -23,7 +23,7 @@ class Index extends Component {
     super(props);
     AOS.init({
       duration: 2000,
-      once: true
+      once: true,
     });
   };
 
@@ -56,17 +56,17 @@ class Index extends Component {
 
   render() {
     return <div>
-        <div className="progress-container">
-          <div className="progress-bar" id="progressBar"></div>
-        </div>
-        <Navbar onClick={this.scrollTo} closeMenu={this.closeMenu}/>
-        <Social isFixed={true} animation="slide-up"/>
-        <Header onClick={this.scrollTo}/>
-        <About />
-        <Work />
-        <Footer />
+      <div className="progress-container">
+        <div className="progress-bar" id="progressBar"></div>
       </div>
+      <Navbar onClick={this.scrollTo} closeMenu={this.closeMenu}/>
+      <Social isFixed={true} animation="slide-up"/>
+      <Header onClick={this.scrollTo}/>
+      <About />
+      <Work />
+      <Footer />
+    </div>
   };
 };
 
-ReactDOM.render(<Index />, document.getElementById("index"));
+createRoot(document.getElementById('index')).render(<Index />);

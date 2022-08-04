@@ -2,76 +2,75 @@
 
 $small-mobile: 430px;
 
-.has-bg-img { 
-    background: url('../../images/background.jpg')center center;
-    background-size:cover; 
+.has-bg-img {
+  background: url('../../images/background.jpg') center center;
+  background-size: cover;
 }
 
 .title.name {
-    @include from($tablet){
-        font-size: 5rem;
-    }
+  @include from($tablet) {
+    font-size: 5rem;
+  }
 
-    @media screen and (min-width: $small-mobile) and (max-width: $tablet){
-        font-size: 3rem !important;
-    }
+  @media screen and (min-width: $small-mobile) and (max-width: $tablet) {
+    font-size: 3rem !important;
+  }
 
-    @include until($small-mobile){
-        font-size: 2rem !important;    
-    }
+  @include until($small-mobile) {
+    font-size: 2rem !important;
+  }
 }
 
 .subtitle.role {
-    @include from($tablet){
-        font-size: 4rem;
-    }
+  @include from($tablet) {
+    font-size: 4rem;
+  }
 
-    @media screen and (min-width: $small-mobile) and (max-width: $tablet){
-        font-size: 2rem;
-    }
+  @media screen and (min-width: $small-mobile) and (max-width: $tablet) {
+    font-size: 2rem;
+  }
 }
 
-.hero-foot{
-    padding-bottom: 1em;
+.hero-foot {
+  padding-bottom: 1em;
 
-    .fa-chevron-down{
-        cursor: pointer;
-        -webkit-animation: pulse 2s infinie;
-        animation: pulse 2s infinite;
-    }
+  .fa-chevron-down {
+    cursor: pointer;
+    -webkit-animation: pulse 2s infinie;
+    animation: pulse 2s infinite;
+  }
 }
 
 @-webkit-keyframes pulse {
-    0% {
-        -webkit-transform: translate(0, 0);
-        transform: translate(0, 0);
-    }
+  0% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
 
-    50% {
-        -webkit-transform: translate(0, 10px);
-        transform: translate(0, 10px); 
-    }
+  50% {
+    -webkit-transform: translate(0, 10px);
+    transform: translate(0, 10px);
+  }
 
-    100% {
-        -webkit-transform: translate(0, 0);
-        transform: translate(0, 0); 
-    }
+  100% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
 }
-  
+
 @keyframes pulse {
-    0% {
-        -webkit-transform: translate(0, 0);
-        transform: translate(0, 0); 
-    }
-    
-    50% {
-        -webkit-transform: translate(0, 10px);
-        transform: translate(0, 10px);
-    }
-    
-    100% {
-        -webkit-transform: translate(0, 0);
-        transform: translate(0, 0);
-    } 
+  0% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+
+  50% {
+    -webkit-transform: translate(0, 10px);
+    transform: translate(0, 10px);
+  }
+
+  100% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
 }
-  

@@ -1,59 +1,58 @@
 @import '../../main.scss';
 
 .social {
+  ul {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+
+    > li {
+      padding: 10px;
+
+      > a:hover {
+        color: $info !important;
+      }
+    }
+  }
+
+  &.is-fixed {
+    width: 40px;
+    position: fixed;
+    bottom: 0px;
+    color: $blue-lighter;
+    left: 40px;
+
+    @include until($tablet) {
+      display: none !important;
+    }
+
+    @include until($desktop) {
+      left: 15px !important;
+    }
 
     ul {
-        display: flex;
-        -webkit-box-align: center;
-        align-items: center;
+      flex-direction: column;
 
-        > li {
-            padding: 10px;
+      &:after {
+        content: '';
+        display: block;
+        width: 1px;
+        height: 90px;
+        margin: 0px auto;
+        background-color: $blue-lighter;
+      }
+    }
+  }
 
-            > a:hover {
-                color: $info !important;
-            }
-        }
+  &:not(.is-fixed) {
+    margin-top: 3rem;
+
+    @include from($tablet) {
+      display: none !important;
     }
 
-    &.is-fixed {
-        width: 40px;
-        position: fixed;
-        bottom: 0px;
-        color: $blue-lighter;
-        left: 40px;
-
-        @include until($tablet){
-            display: none !important;
-        }
-
-        @include until($desktop){
-            left: 15px !important;
-        }
-
-        ul {
-            flex-direction: column;
-     
-            &:after {
-                content: "";
-                display: block;
-                width: 1px;
-                height: 90px;
-                margin: 0px auto;
-                background-color: $blue-lighter;
-            }
-        }
+    ul {
+      justify-content: space-evenly;
     }
-
-    &:not(.is-fixed){
-        margin-top: 3rem;
-        
-        @include from($tablet){
-            display: none !important;
-        }
-
-        ul {
-            justify-content: space-evenly;            
-        }
-    }
+  }
 }
