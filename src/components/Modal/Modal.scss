@@ -1,25 +1,25 @@
 @import '../../main.scss';
 
 .modal {
-    ul {
-        list-style: none !important;
-    }
+  ul {
+    list-style: none !important;
+  }
 
-    li {
-        position: relative;
-        padding-left: 30px;
-    }
+  li {
+    position: relative;
+    padding-left: 30px;
+  }
 
-    li::before {
-        position: absolute;
-        left: 0;
-        margin-right: 10px;
-        content: "</>";
-        font-weight: bold;
-        color: $info;
-    }
+  li::before {
+    position: absolute;
+    left: 0;
+    margin-right: 10px;
+    content: '</>';
+    font-weight: bold;
+    color: $info;
+  }
 
-    .block {
-        margin-bottom: 1em;
-    }
+  .block {
+    margin-bottom: 1em;
+  }
 }

@@ -1,8 +1,5 @@
 {
-    "contact": "Me contacter",
-    "getInTouch": "Si vous souhaitez que l'on travaille ensemble ou tout simplement me contacter",
-    "name": "Nom",
-    "mail": "E-mail",
-    "message": "Message",
-    "submit": "Envoyer"
+  "contact": "Me contacter",
+  "getInTouch": "Je ne suis actuellement pas en recherche de mission mais reste joignable si vous souhaitez me contacter. Que ce soit pour que l'on travaille ensemble ou tout simplement pour passer le bonjour ou répondre à une question.",
+  "email": "M'envoyer un mail"
 }

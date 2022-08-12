@@ -3,41 +3,43 @@ import PropTypes from 'prop-types';
 import resume from '../../pdf/Resume - Bakary TOUNKARA.pdf';
 import cv from '../../pdf/CV - Bakary TOUNKARA.pdf';
 import './Navbar.scss';
-import { useTranslation, withTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 import i18n from 'i18next';
 
 const MIN_SCROLL_POS = 10;
 const SCROLL_DELTA = 5;
 
-const menuItems = [
+const MENU_ITEMS = [
   {
     sectionLink: 'about',
-    delay: 150
-  }, {
+    delay: 150,
+  },
+  {
     sectionLink: 'work',
-    delay: 300
-  }, {
+    delay: 300,
+  },
+  {
     sectionLink: 'contact',
-    delay: 450
-  }
+    delay: 450,
+  },
 ];
 
-const french = {
+const FRENCH = {
   name: 'Français / French',
-  fr: 'fr'
+  fr: 'fr',
 };
 
-const english = {
+const ENGLISH = {
   name: 'Anglais / English',
-  en:'en'
+  en:'en',
 };
 
-const Navbar = ({ onClick }) => {
+const Navbar = ({ onClick, closeMenu }) => {
   const [show, setShow] = useState(true);
   const [scrollPos, setScrollPos] = useState(0);
   const [language, setLanguage] = useState(i18n.language);
 
-  useEffect(() => { i18n.changeLanguage(language) }, [language])
+  useEffect(() => { i18n.changeLanguage(language) }, [language]);
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
@@ -74,7 +76,7 @@ const Navbar = ({ onClick }) => {
 
     setShow(newShow);
     setScrollPos(newScrollPos);
-  }
+  };
 
   const handleBurgerClick = () => {
     const navbar = document.getElementById('nav');
@@ -91,16 +93,14 @@ const Navbar = ({ onClick }) => {
       document.documentElement.classList.remove('locked-scroll');
       document.getElementById('index').classList.remove('blur');
     }
-  }
+  };
 
   const handleChangeLng = (e) => {
     const currentLanguage = i18n.language;
-    const language = currentLanguage === french.fr ? english.en : french.fr;
-    setLanguage(currentLanguage === french.fr ? english.en : french.fr);
-  }
+    setLanguage(currentLanguage === FRENCH.fr ? ENGLISH.en : FRENCH.fr);
+  };
 
   const { t } = useTranslation();
-
   return <nav id="nav" className={`navbar has-background-dark has-text-white is-light is-fixed-top ${show ? 'scrolled-in' : 'scrolled-out'}`}>
 
     { /* Logo and hamburger */ }
@@ -113,25 +113,23 @@ const Navbar = ({ onClick }) => {
     </div>
 
     <div id="navMenu" className="navbar-menu">
-
-      <div className="navbar-end">
-        
+      <div className="navbar-end">     
         <div className="navbar-item"
           data-aos="fade-down"
           data-aos-delay="0"
         >
           <p className="control has-text-centered-touch">
             <a className="button is-light is-outlined is-small is-rounded"
-              title={ language === french.fr ? english.name : french.name }
+              title={ language === FRENCH.fr ? ENGLISH.name : FRENCH.name }
               onClick={handleChangeLng}
             >
-              { language === french.fr ? english.en : french.fr }
+              { language === FRENCH.fr ? ENGLISH.en : FRENCH.fr }
             </a>
           </p>
         </div>
         
         {
-          menuItems.map(item => 
+          MENU_ITEMS.map(item => 
             <a className="navbar-item has-text-centered-touch" 
               key={item.sectionLink}
               onClick={() => onClick(item.sectionLink)}
@@ -148,7 +146,7 @@ const Navbar = ({ onClick }) => {
           data-aos-delay="450"
         >
           <p className="control has-text-centered-touch">
-            <a className="button is-rounded is-light is-outlined" href={ language === french.fr ? cv : resume } target="_blank">
+            <a className="button is-rounded is-light is-outlined" href={ language === FRENCH.fr ? cv : resume } target="_blank">
               <span className="icon">
                 <i className="fas fa-download"></i>
               </span>
@@ -157,14 +155,13 @@ const Navbar = ({ onClick }) => {
           </p>
         </div>
       </div>
-
     </div>
   </nav>
 }
 
 Navbar.propTypes = {
   onClick: PropTypes.func.isRequired,
-  closeMenu: PropTypes.func.isRequired
+  closeMenu: PropTypes.func.isRequired,
 };
 
-export default withTranslation()(Navbar);
+export default Navbar;
