@@ -1,27 +1,27 @@
 @import '../../main.scss';
 
 footer {
-    .copyright {
-        padding-top: 4rem;
-        padding-bottom: 0;
+  .copyright {
+    padding-top: 4rem;
+    padding-bottom: 0;
+  }
+
+  form {
+    max-width: 650px;
+    margin: auto;
+
+    label {
+      color: #ffffff !important;
     }
+  }
 
-    form {
-        max-width: 650px;
-        margin: auto;
+  .source {
+    border-bottom: solid 1px $light;
+    color: $light;
 
-        label {
-            color: #FFFFFF !important;
-        }
-    }    
-
-    .source {
-        border-bottom: solid 1px $light;
-        color: $light;
-
-        &:hover{
-            border-bottom: solid 1px $info !important;
-            color: $info !important;
-        }
+    &:hover {
+      border-bottom: solid 1px $info !important;
+      color: $info !important;
     }
+  }
 }

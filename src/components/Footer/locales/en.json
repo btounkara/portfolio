@@ -1,8 +1,5 @@
 {
-    "contact": "Contact me",
-    "getInTouch": "If you want us to work together or to get in touch",
-    "name": "Name",
-    "mail": "E-mail",
-    "message": "Message",
-    "submit": "Submit"
+  "contact": "Contact me",
+  "getInTouch": "I'm not currently looking for any new opportunity. Nonetheless, my mailbox is always open if you want us to reach out to me. Wether it is to ask me a question of simply to get in touch.",
+  "email": "Send me an email"
 }

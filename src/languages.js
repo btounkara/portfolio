@@ -14,23 +14,23 @@ import enFooter from './components/Footer/locales/en.json';
 import frFooter from './components/Footer/locales/fr.json';
 
 const en = {
-    about: enAbout,
-    navbar: enNavbar,
-    header: enHeader,
-    work: enWork,
-    experience: enExperience,
-    modal: enModal,
-    footer: enFooter
+  about: enAbout,
+  navbar: enNavbar,
+  header: enHeader,
+  work: enWork,
+  experience: enExperience,
+  modal: enModal,
+  footer: enFooter,
 };
 
 const fr = {
-    about: frAbout,
-    navbar: frNavbar,
-    header: frHeader,
-    work: frWork,
-    experience: frExperience,
-    modal: frModal,
-    footer: frFooter
+  about: frAbout,
+  navbar: frNavbar,
+  header: frHeader,
+  work: frWork,
+  experience: frExperience,
+  modal: frModal,
+  footer: frFooter,
 };
 
 export { en, fr };

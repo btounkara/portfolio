@@ -1,6 +1,6 @@
 {
-    "hi": "Bonjour ! Mon nom est ",
-    "role": "Ingénieur Web Fullstack",
-    "based": "J'habite en région parisienne et suis spécialisé dans le développement web",
-    "getToKnow": "En découvrir plus sur moi"
+  "hi": "Bonjour ! Mon nom est ",
+  "role": "Ingénieur Web Fullstack",
+  "based": "J'habite en région parisienne et suis spécialisé dans le développement web",
+  "getToKnow": "En découvrir plus sur moi"
 }
