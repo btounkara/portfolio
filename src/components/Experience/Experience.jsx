@@ -24,7 +24,7 @@ const Experience = ({ value, delay, openModal }) => {
 			{
 				value.role
 					? <p className="is-size-6">
-						{value.role} {t('experience.at')} <a href={value.establishment.link} className="has-text-info">{value.establishment.name}</a>
+						{value.role} {t('experience.at')} <strong><a href={value.establishment.link} className="has-text-info">{value.establishment.name}</a></strong>
 					</p>
 					: <>{value.establishment.name}<br/></>
 			}
