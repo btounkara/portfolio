@@ -71,31 +71,6 @@
     },
     {
       "isWork": true,
-      "dates": "Oct. 2018 - Août 2019",
-      "establishment": {
-        "name": "Traveling for a year in Canada and USA",
-        "link": "https://en.wikipedia.org/wiki/Canada",
-        "domain": "Technological watch and development of personal projects",
-        "resume": "I travaled during a whole year throughout Canada and USA and used that to time to learn about technologies I didn't know and to develop some apps."
-      },
-      "tasks": [
-        "Learning to work with NodeJs, React and Angular with the help of OpenClassroom's courses",
-        "Development of my portfolio using ReactJS",
-        "Learning of using tools such as Webpack, Babel and Bulma",
-        "Developed an Android workout application that can be downloaded on Google's PlayStore (Flash's Workout)"
-      ],
-      "technologies": [
-        "NodeJS",
-        "ReactJS",
-        "Angular",
-        "Android Native (Java)",
-        "Babel",
-        "Bulma",
-        "Webpack"
-      ]
-    },
-    {
-      "isWork": true,
       "dates": "Oct. 2018 - Aug. 2019",
       "establishment": {
         "name": "Traveling for a year throughout Canada and USA",
