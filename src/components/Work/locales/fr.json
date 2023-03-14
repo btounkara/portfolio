@@ -13,18 +13,22 @@
       },
       "tasks": [
         "Développement frontend et backend, intégration continue (Maven, Sonar, Gitlab & GIT), tests unitaires et intégration, refactoring de code et de base de données, déploiements de livrables sur différents environnements(Linux).",
-        "Migration d'une application web JSF/Seam vers VueJS/Spring (Java 14, Nuxt, Vuetify)"
+        "Maintenance évolutive et corrective d'une application web JSF / Seam à migrer en VueJS / Spring (Java 14, Nuxt, Vuetify)",
+        "Développement d'une fonctionnalité d'import / export pour transférer des données sur différents environnements",
+        "Analyse des logs et résolution des bugs de production",
+        "Migration de Vue3 OptionApi vers CompositionApi"
       ],
       "technologies": [
         "Java 14",
         "Spring",
-        "VueJS",
+        "Vue 3",
+        "Composition API",
         "Nuxt",
         "Vuetify",
+        "VueX",
         "MariaDB",
         "MySQL",
-        "Maven",
-        "Git",
+        "Hibernate",
         "Gitlab"
       ]
     },
@@ -83,15 +87,7 @@
         "Découverte d'outils tels que Webpack, Babel et Bulma",
         "Développement d'une application mobile de sport téléchargable sur le Google PlayStore (Flash's Workout)"
       ],
-      "technologies": [
-        "NodeJS",
-        "ReactJS",
-        "Angular",
-        "Android Native (Java)",
-        "Babel",
-        "Bulma",
-        "Webpack"
-      ]
+      "technologies": ["NodeJS", "ReactJS", "Angular", "Android Native (Java)", "Babel", "Bulma", "Webpack"]
     },
     {
       "isWork": true,
@@ -197,16 +193,7 @@
         "Recensement des besoins auprès des ressources humaines.",
         "Développement d’une application web de gestion des congés."
       ],
-      "technologies": [
-        "Php",
-        "MySQL",
-        "WampServer",
-        "HTML5",
-        "CSS3",
-        "Javascript",
-        "Jquery",
-        "SQL"
-      ]
+      "technologies": ["Php", "MySQL", "WampServer", "HTML5", "CSS3", "Javascript", "Jquery", "SQL"]
     }
   ]
 }
